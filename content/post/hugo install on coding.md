@@ -2,7 +2,7 @@
 title: "hugo部署到coding"
 date: 2020-05-13T09:42:06+08:00
 draft: false
-categories: ["website building"]
+categories: ["建站笔记"]
 tags: ["hugo"]
 ---
 

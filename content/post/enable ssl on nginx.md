@@ -2,7 +2,7 @@
 title: "Nginx配置ssl证书"
 date: 2020-05-14T10:07:40+08:00
 draft: false
-categories: ["website building"]
+categories: ["建站笔记"]
 tags: ["ssl"]
 ---
 

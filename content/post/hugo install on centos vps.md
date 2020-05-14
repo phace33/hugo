@@ -2,7 +2,7 @@
 title: "Hugo部署到centos vps"
 date: 2020-05-13T18:05:53+08:00
 draft: false
-categories: ["website building"]
+categories: ["建站笔记"]
 tags: ["hugo","vps"]
 ---
 
