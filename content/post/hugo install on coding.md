@@ -227,6 +227,17 @@ git remote add origin git@e.coding.net:iwyang/hugo.git
 git push --force origin backup
 ```
 
+也可在github新建一个 私人仓库，将源码备份到私人仓库的master分支，代码如下：
+
+```
+git remote rm origin
+git init
+git add .
+git commit -m "备份源码"
+git remote add origin git@github.com:iwyang/hugo-backup.git
+git push --force origin master
+```
+
 ---
 
 附网上找到的另外两个部署脚本，未测试：
