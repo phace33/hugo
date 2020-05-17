@@ -2,6 +2,7 @@
 title: "Hugo部署到ubuntu vps"
 date: 2020-05-14T09:29:13+08:00
 draft: false
+weight: false
 categories: ["建站笔记"]
 tags: ["hugo","vps"]
 ---

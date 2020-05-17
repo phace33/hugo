@@ -2,6 +2,7 @@
 title: "Hugo部署到centos vps"
 date: 2020-05-13T18:05:53+08:00
 draft: false
+weight: false
 categories: ["建站笔记"]
 tags: ["hugo","vps"]
 ---
@@ -18,12 +19,23 @@ tags: ["hugo","vps"]
 
 > **注意：这里是参照vps搭建hexo，所以代码里hexo没有改成hugo，不过这没有任何影响**。
 
+准备工作：搬瓦工VPS，推荐用centos 8，先要更改SSH端口，
+
+```
+vi /etc/ssh/sshd_config
+port 22
+```
+
+然后重启生效。
+
 首先，在 VPS 上安装 Git 和 nginx。
 
 ```
 yum update -y
 yum install git-core nginx -y
 ```
+
+如果是centos 7，先要安装安装epel：`yum install epel-release`，才能安装nginx。
 
 Nginx 安装完成后需要手动启动，启动Nginx并设置开机自启：
 
@@ -100,7 +112,7 @@ mkdir hexo.git && cd hexo.git
 git init --bare
 ```
 
-测试一下，如果在 Git Bash 中输入 `ssh git@VPS的IP地址` 能够远程登录的话，则表示设置成功了。如果你的VPS端口不是22。参考：[上传SSH公钥](https://bore.vip/archives/45284.html#%E4%B8%8A%E4%BC%A0-SSH-%E5%85%AC%E9%92%A5)。
+测试一下，如果在 Git Bash 中输入 `ssh git@VPS的IP地址` 能够远程登录的话，则表示设置成功了。如果你的VPS端口不是22。最好像开头那样更改SSH端口。也可以参考：[上传SSH公钥](https://bore.vip/post/hugo-install-on-ubuntu-vps/#%E4%B8%8A%E4%BC%A0-ssh-%E5%85%AC%E9%92%A5)。
 
 ---
 
@@ -276,3 +288,6 @@ cd ..
 [3.基于CentOS搭建Hexo博客](https://segmentfault.com/a/1190000012907499)
 
 [4.Nginx出现403 forbidden](https://blog.csdn.net/qq_35843543/article/details/81561240)
+
+[5.搬瓦工VPS如何修改SSH端口为默认22端口](https://www.j8mao.com/index.php/archives/52/)
+

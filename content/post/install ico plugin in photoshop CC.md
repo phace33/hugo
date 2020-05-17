@@ -2,6 +2,7 @@
 title: "让Photoshop CC支持.ico格式"
 date: 2020-05-16T00:43:08+08:00
 draft: false
+weight: false
 categories: ["学习笔记"]
 tags: ["ps"]
 ---

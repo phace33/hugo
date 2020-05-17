@@ -2,6 +2,7 @@
 title: "Hugo迁移笔记"
 date: 2020-05-16T00:19:46+08:00
 draft: false
+weight: false
 categories: ["建站笔记"]
 tags: ["hugo"]
 ---

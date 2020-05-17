@@ -6,6 +6,19 @@ categories: [""]
 tags: [""]
 ---
 
- 2020-5-13 
+### 关于
 
-不用hexo了，就用hugo吧，简简单单就好。搜索也不准备弄了，每篇文章做好分类、标签，然后在归档页利用`Ctrl+F`来搜索就行了，至于评论系统，感觉也没有开的必要。
+2020.5.13　不用hexo了，就用hugo吧，简简单单就好。
+
+---
+
+### 链接
+
++ 技术类博客
+
+[狂飙](https://networm.me/)　　[Git教程](https://www.liaoxuefeng.com/wiki/896043488029600)
+
++ 工具类网站
+
+[新域名排行](https://namestat.org/) 　　[Ping检测](http://ping.chinaz.com/)
+

@@ -2,6 +2,7 @@
 title: "Nginx配置ssl证书"
 date: 2020-05-14T10:07:40+08:00
 draft: false
+weight: false
 categories: ["建站笔记"]
 tags: ["ssl"]
 ---
@@ -18,7 +19,6 @@ tags: ["ssl"]
 
 4. 接下来按操作进行，具体可参考：[最新阿里云申请免费SSL证书教程](https://yq.aliyun.com/articles/637307)
 
-   <!-- more -->
 
 ### 安装证书
 
@@ -38,13 +38,13 @@ mkdir cert
 ```js
 server {
     listen 80;
-    server_name iwyang.top www.iwyang.top;
+    server_name bore.vip www.bore.vip;
     rewrite ^(.*)$ https://$server_name$1 permanent;
 }
 server {
    listen 443;
   root /var/www/hexo;
-  server_name iwyang.top www.iwyang.top;
+  server_name bore.vip www.bore.vip;
   ssl on;
   ssl_certificate /etc/nginx/cert/xxxx.pem;
   ssl_certificate_key /etc/nginx/cert/xxxx.key;
@@ -78,11 +78,15 @@ server {
 }
 ```
 
-4.修改hexo站点配置文件_config.yml
+4.修改hugo站点配置文件_config.toml
 
-`url: https://iwyang.top`
+`baseURL = "https://bore.vip/"`
 
-5.重启nginx服务。
+5.开启负载均衡
+
+在阿里云[SSl证书控制台](https://yundunnext.console.aliyun.com/?spm=a2c4g.11186623.2.13.775345eav2PxV4&p=cas#/overview/cn-hangzhou)，依次选择`部署—负载均衡—选择所有区域`，然后部署。
+
+6.重启nginx服务。
 
 ubuntu、centos 6
 

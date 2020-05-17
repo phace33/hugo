@@ -2,8 +2,10 @@
 title: "hugo部署到coding"
 date: 2020-05-13T09:42:06+08:00
 draft: false
+weight: false
 categories: ["建站笔记"]
 tags: ["hugo"]
+
 ---
 
 ## 本地操作
@@ -99,9 +101,11 @@ git pull
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
+lastmod: {{ .Date }}
 draft: false
+weight: false
 categories: [""]
-tags: [""]
+tags: [""] 
 ```
 
 　接下来在根目录下使用以下命令生成一篇文档吧：

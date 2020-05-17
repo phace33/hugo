@@ -10,7 +10,7 @@ hugo
 cd public
 git remote rm origin
 git init
-git remote add origin git@e.coding.net:iwyang/hugo.git
+git remote add origin git@104.224.191.88:hexo.git
 git add .
 
 # Commit changes.

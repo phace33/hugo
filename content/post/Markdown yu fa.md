@@ -1,7 +1,8 @@
 ---
-title: "Markdown基本语法"
+title: "markdown基本语法"
 date: 2020-05-16T08:47:17+08:00
 draft: false
+weight: false
 categories: ["学习笔记"]
 tags: [""]
 ---
@@ -119,6 +120,10 @@ cond(no)->op
 &```
 
 ```
+
+## 添加空格
+
+在中文输入法的情况下：`shift＋空格键`切换至全角模式，之后再按空格键，那么空格键就会生效。
 
 ## 参考链接
 
