@@ -26,9 +26,3 @@ git push origin master --force
 # Come Back up to the Project Root
 cd ..
 
-git remote rm origin
-git init
-git add .
-git commit -m "备份源码"
-git remote add origin git@github.com:iwyang/hugo-backup.git
-git push --force origin master
