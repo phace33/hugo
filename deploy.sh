@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "\033[0;32mDeploying updates to Coding...\033[0m"
+echo -e "\033[0;32mDeploying updates to vps...\033[0m"
 
 # Removing existing files
 rm -rf public/*
@@ -8,9 +8,6 @@ rm -rf public/*
 hugo
 # Go To Public folder
 cd public
-git remote rm origin
-git init
-git remote add origin git@104.224.191.88:hexo.git
 git add .
 
 # Commit changes.

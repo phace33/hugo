@@ -12,4 +12,4 @@ tags: ["flash"]
 
 1. 按住alt键，拖动直线，会拉出一个尖点。
 2. `Ctrl+g` 将绘图对象变成组，就不会覆盖。
-3. https://addons.mozilla.org/zh-CN/firefox/addon/vagex2/?src=search
+3. 
