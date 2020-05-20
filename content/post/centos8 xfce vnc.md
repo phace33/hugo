@@ -66,7 +66,7 @@ exec startxfce4
 ```
 # securitytypes=vncauth,tlsvnc
 # desktop=sandbox
-geometry=800x600
+geometry=1024x768
 # localhost
 # alwaysshared
 dpi=96

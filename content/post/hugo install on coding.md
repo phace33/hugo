@@ -175,12 +175,12 @@ git push --force origin master
 
 ### 自动备份脚本
 
-为了后续更新方便起见，可以在根目录新建一个一键自动部署脚本，命名为`deploy.sh`
+为了后续更新方便起见，可以在根目录新建一个一键自动部署脚本，命名为`deploy.sh`（如果对配置不做大的改动（例如：更换主题等），后续的更新可以使用以下脚本）
 
 ```
 #!/bin/bash
 
-echo -e "\033[0;32mDeploying updates to Coding...\033[0m"
+echo -e "\033[0;32mDeploying updates to vps...\033[0m"
 
 # Removing existing files
 rm -rf public/*
@@ -188,9 +188,6 @@ rm -rf public/*
 hugo
 # Go To Public folder
 cd public
-git remote rm origin
-git init
-git remote add origin git@e.coding.net:iwyang/hugo.git
 git add .
 
 # Commit changes.
@@ -240,7 +237,7 @@ git push --force origin master
 
 ---
 
-附网上找到的另外两个部署脚本，未测试：
+附网上找到的另外两个部署脚本：
 
 官方脚本：
 
@@ -273,40 +270,36 @@ cd ..
 
 另外一个脚本：
 
+（如果用上面的自动部署脚本出现问题，可以试试这个，不过这个脚本部署时经常会导致部分页面丢失，还不知道原因）
+
 ```
 #!/bin/bash
-# 判断public文件夹是否存在
-hugoPath=`pwd`
-publicPath=`pwd`"/public"
-if [ ! -d $publicPath ];then
-  echo public not exist
-  exit
-fi
 
-# 进入public文件夹，并清空之前生成文件
-cd $publicPath
-rm -r ./*
+echo -e "\033[0;32mDeploying updates to Coding...\033[0m"
 
-# 回到根目录，并生成新的静态文件
-cd $hugoPath
+# Removing existing files
+rm -rf public/*
+# Build the project
 hugo
+# Go To Public folder
+cd public
+git remote rm origin
+git init
+git remote add origin git@e.coding.net:iwyang/hugo.git
+git add .
 
-# 回到public，并进行提交
-cd $publicPath
+# Commit changes.
+msg="rebuilding site `date`"
+if [ $# -eq 1 ]
+  then msg="$1"
+fi
+git commit -m "$msg"
 
-#添加所有修改
-git add -A .
+# Push source and build repos.
+git push origin master --force
 
-# 设置提交说明，格式为 Site updated: 2006-01-02 15:04:05
-time=$(date "+%Y-%m-%d %H:%M:%S")
-commit="Site updated:"$time
-echo $commit
-
-#提交
-git commit -m "$commit"
-
-#推送到master分支上
-git push origin master
+# Come Back up to the Project Root
+cd ..
 ```
 
 ---
