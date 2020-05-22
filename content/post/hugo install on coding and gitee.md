@@ -317,11 +317,25 @@ cd ..
 
 和部署到coding大同小异，但需要注意以下几点：
 
-免费版gitee page不支持绑定域名、不支持自动部署。还有关于首页地址见官方文档：
+免费版gitee page不支持绑定域名、不支持自动部署，并且上传了代码服务里才有gitee pages选项。还有关于首页地址见官方文档：
 
 >如何创建一个首页访问地址不带二级目录的 pages，如ipvb.gitee.io？
 
 答：如果你想你的 pages 首页访问地址不带二级目录，如ipvb.gitee.io，你需要建立一个与自己个性地址同名的仓库，如 https://gitee.com/ipvb 这个用户，想要创建一个自己的站点，但不想以子目录的方式访问，想以ipvb.gitee.io直接访问，那么他就可以创建一个名字为ipvb的仓库 https://gitee.com/ipvb/ipvb 部署完成后，就可以以 https://ipvb.gitee.io 进行访问了。
+
+### 提交本地仓库
+
+```
+rm -rf public/*
+hugo
+cd public
+git remote rm origin
+git init
+git remote add origin git@gitee.com:iwyang/iwyang.git
+git add .
+git commit -m "Add a new post"
+git push --force origin master
+```
 
 ## 参考链接
 
