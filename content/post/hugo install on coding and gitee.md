@@ -219,8 +219,8 @@ git remote rm origin
 git init
 git checkout -b backup
 git add .
-git commit -m "提交说明"
-git remote add origin git@gitee.com:iwyang/iwyang.git
+git commit -m "备份源码"
+git remote add origin git@e.coding.net:iwyang/hugo.git
 git push --force origin backup
 ```
 
@@ -335,6 +335,18 @@ git remote add origin git@gitee.com:iwyang/iwyang.git
 git add .
 git commit -m "Add a new post"
 git push --force origin master
+```
+
+### 备份hugo源码
+
+```
+git remote rm origin
+git init
+git checkout -b backup
+git add .
+git commit -m "备份源码"
+git remote add origin git@gitee.com:iwyang/iwyang.git
+git push --force origin backup
 ```
 
 ## 参考链接
