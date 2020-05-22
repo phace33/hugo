@@ -220,7 +220,7 @@ git init
 git checkout -b backup
 git add .
 git commit -m "提交说明"
-git remote add origin git@e.coding.net:iwyang/hugo.git 
+git remote add origin git@gitee.com:iwyang/iwyang.git
 git push --force origin backup
 ```
 
