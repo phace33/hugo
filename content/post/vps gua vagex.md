@@ -27,6 +27,8 @@ yum install firefox -y
 解压后会生成一个 firefox 子目录，里面有最新版本的 firefox 的二进制可执行文件，以及各种扩展模块，插件等等。
 
 ```
+yum install tar -y
+yum install bzip2 -y
 tar -xjvf Firefox-latest-x86_64.tar.bz2
 ```
 
