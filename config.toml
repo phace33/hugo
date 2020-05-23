@@ -1,7 +1,7 @@
 baseURL = "https://iwyang.gitee.io/"
 languageCode = "en"
 defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... (This field determines which i18n file to use)
-title = "Yang's Blog"
+title = "Yang's Note"
 preserveTaxonomyNames = true
 enableRobotsTXT = true
 enableEmoji = true
@@ -64,7 +64,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   gitRepo = ""
 
   # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
-  logoTitle = "Yang's Blog"        # default: the title value    # 默认值: 上面设置的title值
+  logoTitle = "Yang's Note"        # default: the title value    # 默认值: 上面设置的title值
   keywords = ["个人博客","笔记","hugo"]
   description = "学习、记录、成长"
 
