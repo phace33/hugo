@@ -12,15 +12,5 @@ tags: [""]
 
 2020.5.23　以后就部署到gitee了。
 
----
 
-### 链接
-
-+ 技术类博客
-
-[狂飙](https://networm.me/)　　[Git教程](https://www.liaoxuefeng.com/wiki/896043488029600)
-
-+ 工具类网站
-
-[新域名排行](https://namestat.org/) 　　[Ping检测](http://ping.chinaz.com/)
 

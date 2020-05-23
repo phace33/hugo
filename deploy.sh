@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "\033[0;32mDeploying updates to vps...\033[0m"
+echo -e "\033[0;32mDeploying updates to gitee...\033[0m"
 
 # Removing existing files
 rm -rf public/*
@@ -22,7 +22,3 @@ git push origin master --force
 
 # Come Back up to the Project Root
 cd ..
-
-git add .
-git commit -m "备份源码"
-git push --force origin backup
