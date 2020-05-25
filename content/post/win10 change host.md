@@ -1,5 +1,5 @@
 ---
-title: "Windows10 修改host文件的方法"
+title: "Win10 修改host文件的方法"
 date: 2020-05-16T01:04:45+08:00
 draft: false
 weight: false

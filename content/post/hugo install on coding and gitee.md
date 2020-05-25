@@ -180,7 +180,7 @@ git push --force origin master
 ```
 #!/bin/bash
 
-echo -e "\033[0;32mDeploying updates to vps...\033[0m"
+echo -e "\033[0;32mDeploying updates to gitee...\033[0m"
 
 # Removing existing files
 rm -rf public/*

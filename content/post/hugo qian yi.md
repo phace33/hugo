@@ -7,12 +7,12 @@ categories: ["建站笔记"]
 tags: ["hugo"]
 ---
 
- ## 更换VPS
+ ## 更换服务器
 
 参考：
 
-+ [Hugo部署到centos vps—VPS操作部分](https://bore.vip/post/hugo-install-on-centos-vps/#vps%E6%93%8D%E4%BD%9C)
-+ [Hugo部署到ubuntu vps—VPS操作部分](https://bore.vip/post/hugo-install-on-ubuntu-vps/#vps%E6%93%8D%E4%BD%9C)
++ [Hugo部署到centos —服务器操作部分](https://iwyang.gitee.io/post/hugo-install-on-centos/#%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%93%8D%E4%BD%9C)
++ [Hugo部署到ubuntu —服务器操作部分](https://iwyang.gitee.io/post/hugo-install-on-ubuntu/#%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%93%8D%E4%BD%9C)
 
 ## 更换电脑、重装系统
 
@@ -20,11 +20,11 @@ tags: ["hugo"]
 
 > **注意最后不用初始化hugo，因为我们已经有了博客原文件了**。
 
-### VPS上的操作
+### 服务器上的操作
 
-如果是部署到VPS，先将VPS原来的SSH 公钥先删除，再上传新的SSH 公钥。具体操作如下:
+如果是部署到服务器，先将服务器原来的SSH 公钥先删除，再上传新的SSH 公钥。具体操作如下:
 
-VPS上输入：
+服务器上输入：
 
 ```
 su git
@@ -38,7 +38,7 @@ rm -rf authorized_keys
 ssh-copy-id -i ~/.ssh/id_rsa.pub git@服务器ip地址
 ```
 
-如果在git bash中输入ssh git@VPS的IP地址,能够远程登录的话，则表示设置成功了。如若还是要输入密码，就修改目录权限：
+如果在git bash中输入ssh git@服务器的IP地址,能够远程登录的话，则表示设置成功了。如若还是要输入密码，就修改目录权限：
 
 ```javascript
 chmod 600 ~/.ssh/authorized_keys

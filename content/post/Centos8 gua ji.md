@@ -1,14 +1,14 @@
 ---
-title: "vps挂vagex笔记"
+title: "Centos8挂机笔记"
 date: 2020-05-18T15:33:15+08:00
 lastmod: 2020-05-18T15:33:15+08:00
 draft: false
 weight: false
 categories: ["建站笔记"]
-tags: ["vps"] 
+tags: ["服务器"] 
 ---
 
-接上篇[Centos8安装xfce&vnc](https://bore.vip/post/centos8-xfce-vnc/)，接下来说下，怎样在centos vps上挂vagex。
+接上篇[Centos8安装xfce&vnc](https://bore.vip/post/centos8-xfce-vnc/)，接下来记下，怎样在centos 服务器上挂机。
 
 ## 安装、更新firefox
 
@@ -110,11 +110,11 @@ firefox -v
 
 `browser.tabs.remote.autostart`  设为false
 
-## 安装配置vagex插件
+## 安装配置挂机插件
 
 ### 安装插件
 
-在火狐里安装插件，地址：[vagex](https://addons.mozilla.org/en-US/firefox/addon/vagex2/?src=search)
+在火狐里安装插件。
 
 ### 配置插件
 
@@ -141,13 +141,11 @@ vi root
 
 ## 参考链接
 
-[1.Linux-VPS 挂 vagex](http://yang-w.blogspot.com/2013/03/make-money-through-vagex.html)    
+[1.centos系统crontab实现自动定时重启教程](https://www.iteye.com/blog/wangbanmin-2397404) 
 
-[2.ebesucher-老牌德国挂机网站](http://yang-w.blogspot.com/2014/01/ebesucher.html)
+[2.centos7 更新Firefox版本](https://cloud.tencent.com/developer/article/1406596)   
 
-[3.centos系统crontab实现自动定时重启教程](https://www.iteye.com/blog/wangbanmin-2397404) 
 
-[4.centos7 更新Firefox版本](https://cloud.tencent.com/developer/article/1406596)   
 
 ​       
 

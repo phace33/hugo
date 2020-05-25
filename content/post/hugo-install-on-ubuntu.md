@@ -1,23 +1,23 @@
 ---
-title: "Hugo部署到ubuntu vps"
+title: "Hugo部署到ubuntu"
 date: 2020-05-14T09:29:13+08:00
 draft: false
 weight: false
 categories: ["建站笔记"]
-tags: ["hugo","vps"]
+tags: ["hugo","服务器"]
 ---
 
  ## 本地操作
 
-参考:  [hugo部署到coding-本地操作部分](https://blog.bore.vip/post/hugo-install-on-coding/#本地操作)
+参考:  [hugo部署到coding-本地操作部分](https://iwyang.gitee.io/post/hugo-install-on-coding-and-gitee/#%E6%9C%AC%E5%9C%B0%E6%93%8D%E4%BD%9C)
 
-## VPS操作
+## 服务器操作
 
-> **注意：这里是参照vps搭建hexo，所以代码里hexo没有改成hugo，不过这没有任何影响**。
+> **注意：这里是参照服务器搭建hexo，所以代码里hexo没有改成hugo，不过这没有任何影响**。
 
 ### 安装依赖 ###
 
-首先，在 VPS 上安装 Git 和 nginx。
+首先，在 服务器 上安装 Git 和 nginx。
 
 ```
 apt-get update -y
@@ -49,7 +49,7 @@ chmod 440 /etc/sudoers
 
 ### 上传 SSH 公钥
 
-接下来要把本地的 ssh 公钥上传到 VPS 。执行
+接下来要把本地的 ssh 公钥上传到 服务器 。执行
 
 ```
 su git
@@ -68,12 +68,12 @@ mkdir hexo.git && cd hexo.git
 git init --bare
 ```
 
-测试一下，如果在 Git Bash 中输入 `ssh git@VPS的IP地址` 能够远程登录的话，则表示设置成功了。
-如果不成功，并且你的 VPS 的 ssh 端口不是 `22` 的话，请在`Git Bash`执行`vi ~/.ssh/config`，输入以下内容并保存：（成功就跳过这一步）
+测试一下，如果在 Git Bash 中输入 `ssh git@服务器的IP地址` 能够远程登录的话，则表示设置成功了。
+如果不成功，并且你的 服务器 的 ssh 端口不是 `22` 的话，请在`Git Bash`执行`vi ~/.ssh/config`，输入以下内容并保存：（成功就跳过这一步）
 
 ```
-Host #VPS 的 IP
-HostName #VPS 的 IP
+Host #服务器 的 IP
+HostName #服务器 的 IP
 User git
 Port #SSH 端口
 IdentityFile ~/.ssh/id_rsa
@@ -229,9 +229,9 @@ cd ..
 
 ## 参考链接
 
-[1.通过 Git Hooks 自动部署 Hexo 到 VPS](https://blog.yizhilee.com/post/deploy-hexo-to-vps/)
+[1.通过 Git Hooks 自动部署 Hexo 到 服务器](https://blog.yizhilee.com/post/deploy-hexo-to-服务器/)
 
-[2.在VPS上搭建hexo博客，利用git更新](https://tiktoking.github.io/2016/01/26/hexo/)
+[2.在服务器上搭建hexo博客，利用git更新](https://tiktoking.github.io/2016/01/26/hexo/)
 
 [3.Windows10下Git环境变量配置](https://www.cnblogs.com/qingmuchuanqi48/p/12052289.html)
 

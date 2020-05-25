@@ -4,7 +4,7 @@ date: 2020-05-14T10:07:40+08:00
 draft: false
 weight: false
 categories: ["建站笔记"]
-tags: ["ssl"]
+tags: ["nginx"]
 ---
 
 ## 启用阿里免费证书

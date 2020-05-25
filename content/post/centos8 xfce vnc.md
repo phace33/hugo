@@ -5,7 +5,7 @@ lastmod: 2020-05-18T14:06:52+08:00
 draft: false
 weight: false
 categories: ["建站笔记"]
-tags: ["vps"] 
+tags: ["服务器"] 
 ---
 
 ##  安装 Xfce 桌面环境

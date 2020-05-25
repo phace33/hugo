@@ -1,13 +1,13 @@
 ---
-title: "Hugo部署到centos vps"
+title: "Hugo部署到centos"
 date: 2020-05-13T18:05:53+08:00
 draft: false
 weight: false
 categories: ["建站笔记"]
-tags: ["hugo","vps"]
+tags: ["hugo","服务器"]
 ---
 
- VPS环境：Centos 8 x64
+ 服务器环境：Centos 8 x64
 
 本地环境：Win10 x64
 
@@ -15,11 +15,11 @@ tags: ["hugo","vps"]
 
 参考：[hugo部署到coding-本地操作部分](https://blog.bore.vip/post/hugo-install-on-coding/#%E6%9C%AC%E5%9C%B0%E6%93%8D%E4%BD%9C)
 
-## VPS操作
+## 服务器操作
 
-> **注意：这里是参照vps搭建hexo，所以代码里hexo没有改成hugo，不过这没有任何影响**。
+> **注意：这里是参照服务器搭建hexo，所以代码里hexo没有改成hugo，不过这没有任何影响**。
 
-准备工作：搬瓦工VPS，推荐用centos 8，先要更改SSH端口，
+准备工作：如果服务器端口不是22，先要更改SSH端口，
 
 ```
 vi /etc/ssh/sshd_config
@@ -28,7 +28,7 @@ port 22
 
 然后重启生效。
 
-首先，在 VPS 上安装 Git 和 nginx。
+首先，在服务器上安装 Git 和 nginx。
 
 ```
 yum update -y
@@ -85,7 +85,7 @@ chmod 440 /etc/sudoers
 
 ### 上传 SSH 公钥
 
-接下来要把本地的 ssh 公钥上传到 VPS 。执行
+接下来要把本地的 ssh 公钥上传到服务器 。执行
 
 ```
 su git
@@ -112,7 +112,7 @@ mkdir hexo.git && cd hexo.git
 git init --bare
 ```
 
-测试一下，如果在 Git Bash 中输入 `ssh git@VPS的IP地址` 能够远程登录的话，则表示设置成功了。如果你的VPS端口不是22。最好像开头那样更改SSH端口。也可以参考：[上传SSH公钥](https://bore.vip/post/hugo-install-on-ubuntu-vps/#%E4%B8%8A%E4%BC%A0-ssh-%E5%85%AC%E9%92%A5)。
+测试一下，如果在 Git Bash 中输入 `ssh git@服务器的IP地址` 能够远程登录的话，则表示设置成功了。如果你的服务器端口不是22。最好像开头那样更改SSH端口。也可以参考：[上传SSH公钥](https://bore.vip/post/hugo-install-on-ubuntu-服务器/#%E4%B8%8A%E4%BC%A0-ssh-%E5%85%AC%E9%92%A5)。
 
 ---
 
@@ -281,7 +281,7 @@ cd ..
 
 ## 参考链接
 
-[1.在VPS上搭建hexo博客，利用git更新](https://tiktoking.github.io/2016/01/26/hexo/#)
+[1.在服务器上搭建hexo博客，利用git更新](https://tiktoking.github.io/2016/01/26/hexo/#)
 
 [2.从 0 开始搭建 hexo 博客](https://eliyar.biz/how_to_build_hexo_blog/)
 
@@ -289,5 +289,5 @@ cd ..
 
 [4.Nginx出现403 forbidden](https://blog.csdn.net/qq_35843543/article/details/81561240)
 
-[5.搬瓦工VPS如何修改SSH端口为默认22端口](https://www.j8mao.com/index.php/archives/52/)
+
 
