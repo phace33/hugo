@@ -185,7 +185,8 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 
   [params.social]                                         # 社交链接
     a-email = "mailto:iwyang@qq.com"
-    o-bilibili = "https://space.bilibili.com/20475120"
+    j-douban = "https://www.douban.com/people/185432529"
+	o-bilibili = "https://space.bilibili.com/20475120"
 
 # See https://gohugo.io/about/hugo-and-gdpr/
 [privacy]

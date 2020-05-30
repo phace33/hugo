@@ -127,6 +127,8 @@ cond(no)->op
 
 ## 参考链接
 
-[Markdown基本语法](https://www.jianshu.com/p/191d1e21f7ed)
+[1.Markdown 编辑器语法指南](https://segmentfault.com/markdown#articleHeader13)
+
+[2.Markdown基本语法](https://www.jianshu.com/p/191d1e21f7ed)
 
 推荐使用[Typora](https://typora.io/)编辑器
