@@ -342,7 +342,7 @@ git checkout -b backup  #切换分支
 
 ### 4.2. 备份到github master分支
 
-按理说备份到私人仓库为好，可为了`GitInfo`以及`lastmod`生效，需要新建一个公共仓库。
+按理说备份到私人仓库为好，可为了`GitInfo`以及`lastmod`生效，需要新建一个公共仓库。（注意要先备份源码到github上，再部署public里的网页到服务器上，为了方便，需要在自动部署脚本里作相应设置）
 
 ```
 git remote rm origin
