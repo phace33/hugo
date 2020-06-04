@@ -6,6 +6,8 @@ echo -e "\033[0;32mDeploying updates to gitee...\033[0m"
 rm -rf public/*
 # Build the project
 hugo
+npm install
+npm run algolia 
 # Go To Public folder
 cd public
 git add .
