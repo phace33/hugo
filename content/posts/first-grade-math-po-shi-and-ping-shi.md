@@ -5,7 +5,7 @@ date: 2020-06-04T22:33:15+08:00
 lastmod: 2020-06-04T22:33:15+08:00
 draft: false
 toc:
-  enable: false
+  enable: true
 weight: false
 categories: ["教学笔记"]
 tags: ["一年级数学"]
@@ -17,4 +17,4 @@ tags: ["一年级数学"]
 
 口算18-9= (   ) 时，可以这样想：先算(10)-(9)=(1)，再算(1)+(8)=(9)
 
-## 2. 破十法
+## 2. 平十法
