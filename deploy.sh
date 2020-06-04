@@ -2,6 +2,11 @@
 
 echo -e "\033[0;32mDeploying updates to gitee...\033[0m"
 
+# backup
+git add .
+git commit -m "备份源码"
+git push origin backup --force
+
 # Removing existing files
 rm -rf public/*
 # Build the project
