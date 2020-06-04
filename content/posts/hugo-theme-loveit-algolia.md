@@ -76,17 +76,19 @@ npm install
 npm run algolia // 在hugo命令后面执行
 ```
 
+### 2.3. 修改自动部署脚本
+
 自动部署脚本改成这样：
 
 ```
 #!/bin/bash
 
-echo -e "\033[0;32mDeploying updates to gitee...\033[0m"
+echo -e "\033[0;32mDeploying updates to vps...\033[0m"
 
 # backup
 git add .
 git commit -m "备份源码"
-git push origin backup --force
+git push origin master --force
 
 # Removing existing files
 rm -rf public/*

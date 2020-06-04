@@ -36,7 +36,7 @@ theme = "LoveIt"
 
 # website title
 # 网站标题
-title = "Yang's Note"
+title = "bore's Note"
 
 # whether to use robots.txt
 # 是否使用 robots.txt
@@ -128,9 +128,9 @@ enableEmoji = true
         # 是否在搜索索引中使用基于 baseURL 的绝对路径
         absoluteURL = false
         [languages.zh-cn.params.search.algolia]
-          index = ""
-          appID = ""
-          searchKey = ""
+          index = "hugo"
+          appID = "W3GPBH19ZO"
+          searchKey = "5e21a3d054db52bb93d8bc274394d1b5"
       # 主页信息设置
       [languages.zh-cn.params.home]
         # RSS 文章数目
@@ -233,7 +233,7 @@ enableEmoji = true
   defaultTheme = "auto"
   # public git repo url only then enableGitInfo is true
   # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
-  gitRepo = "https://github.com/dillonzq/LoveIt"
+  gitRepo = "https://github.com/iwyang/hugo-backup"
   # which hash function used for SRI, when empty, no SRI is used ("sha256", "sha384", "sha512", "md5")
   # 哪种哈希函数用来 SRI, 为空时表示不使用 SRI ("sha256", "sha384", "sha512", "md5")
   fingerprint = ""
@@ -261,7 +261,7 @@ enableEmoji = true
       logo = ""
       # title name
       # 标题名称
-      name = "Yang's Note"
+      name = "cd /home"
       # you can add extra information before the name (HTML format is supported), such as icons
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
       pre = "<i class='far fa-kiss-wink-heart fa-fw'></i>"
@@ -470,19 +470,19 @@ enableEmoji = true
       # Valine comment config (https://github.com/xCss/Valine)
       # Valine 评论系统设置 (https://github.com/xCss/Valine)
       [params.page.comment.valine]
-        enable = false
-        appId = ""
-        appKey = ""
-        placeholder = ""
+        enable = true
+        appId = "CNeyW3xuBg8PWJwDI0ig1AE2-MdYXbMMI"
+        appKey = "HrJsI7Cl93RIa8Cks5qtkSsE"
+        placeholder = "在这里留下足迹吧!(留下昵称和邮箱即可收到回复邮件提醒哦)"
         avatar = "mp"
-        meta= ""
+        meta= ['nick','mail']
         pageSize = 10
         lang = ""
         visitor = true
-        recordIP = true
+        recordIP = false
         highlight = true
         enableQQ = false
-        serverURLs = "https://leancloud.hugoloveit.com"
+        serverURLs = ""
         # emoji data file name, default is "google.yml"
         # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
         # located in "themes/LoveIt/assets/data/emoji/" directory
@@ -677,7 +677,7 @@ enableEmoji = true
 # Author config
 # 作者配置
 [author]
-  name = "yang"
+  name = "bore"
   email = "iwyang@qq.com"
   link = ""
 

@@ -210,40 +210,6 @@ cd ..
 chmod 777 xxx
 ```
 
-### 2.5. 备份hugo源码
-
-在coding上新建一个backup的分支，然后把下面代码加到`deploy.sh`末尾，这种方法有个问题，那就是themes等几个文件夹无法备份，还没找到原因。不过content文章文件夹可以备份，这样也行。
-
-```
-git remote rm origin
-git init
-git checkout -b backup
-git add .
-git commit -m "备份源码"
-git remote add origin git@e.coding.net:iwyang/hugo.git
-git push --force origin backup
-```
-
----
-
-PS: **如果执行第三步`git checkout -b backup`后，提示`fatal: A branch named 'backup' already exists.`，则执行以下操作：**
-
-```
-git branch -D backup   #删除分支:必须切换到其他的分之下才可操作
-git checkout -b backup
-```
-
-也可在github新建一个 私人仓库，将源码备份到私人仓库的master分支，代码如下：
-
-```
-git remote rm origin
-git init
-git add .
-git commit -m "备份源码"
-git remote add origin git@github.com:iwyang/hugo-backup.git
-git push --force origin master
-```
-
 ---
 
 附网上找到的另外两个部署脚本：
@@ -349,7 +315,52 @@ git remote add origin git@gitee.com:iwyang/iwyang.git
 git push origin backup --force
 ```
 
-## 4. 参考链接
+## 4. 备份hugo源码
+
+### 4.1. 备份到gitee backup分支
+
+在gitee上新建一个backup的分支，然后把下面代码加到`deploy.sh`末尾，这种方法有个问题，那就是themes等几个文件夹无法备份，还没找到原因。不过content文章文件夹可以备份，这样也行。
+
+```
+git remote rm origin
+git init
+git checkout -b backup
+git add .
+git commit -m "备份源码"
+git remote add origin git@gitee.com:iwyang/iwyang.git
+git push --force origin backup
+```
+
+---
+
+PS: **如果执行第三步`git checkout -b backup`后，提示`fatal: A branch named 'backup' already exists.`，则执行以下操作：**
+
+```
+git branch -D backup    #删除分支:必须切换到其他的分之下才可操作
+git checkout -b backup  #切换分支
+```
+
+### 4.2. 备份到github master分支
+
+按理说备份到私人仓库为好，可为了`GitInfo`以及`lastmod`生效，需要新建一个公共仓库。
+
+```
+git remote rm origin
+git init
+git add .
+git commit -m "备份源码"
+git remote add origin git@github.com:iwyang/hugo-backup.git
+git push --force origin master
+```
+
+然后在`config.toml`里作如下修改
+
+```
+enableGitInfo = true
+gitRepo = "https://github.com/iwyang/hugo-backup"
+```
+
+## 5. 参考链接
 
 [1.Hugo+github搭建个人博客 (windows10)](https://saquarius.com/2019/07/hugo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2windows10/#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C)
 
