@@ -346,7 +346,7 @@ git checkout -b backup
 git add .
 git commit -m "备份源码"
 git remote add origin git@gitee.com:iwyang/iwyang.git
-git push --force origin backup
+git push origin backup --force
 ```
 
 ## 4. 参考链接
