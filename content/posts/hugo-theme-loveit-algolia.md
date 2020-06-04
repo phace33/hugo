@@ -15,13 +15,13 @@ tags: ["hugo"]
 
 ## 1. 生成索引文件
 
-### 1.1 Algolia创建空索引
+### 1.1. Algolia创建空索引
 
 + 创建应用，自取名字(比如说blog)
 + 创建索引，自取名字(比如说hugo)
 + 点击侧栏 `API Keys`，记录信息(Application ID, Search-Only API Key, Admin API Key)
 
-### 1.2 Hugo生成索引文件
+### 1.2. Hugo生成索引文件
 
 参考上文[Hugo LoveIt主题配置与使用](https://iwyang.gitee.io/hugo-theme-loveit/)，修改`config.toml`相应Algolia参数即可。
 
@@ -29,14 +29,14 @@ tags: ["hugo"]
 
 生成索引文件之后，我们需要上传到Algolia的服务器。
 
-### 2.1 手动上传
+### 2.1. 手动上传
 
 这一步是可选的，不过还是建议跟着做一下。
 
 + 点击侧栏` Indices —Add records—Upload file`按钮，上传上一步生成的 index.json 文件（具体位置在根目录public文件夹里）。
 + 上传成功之后，我们就可以马上尝试搜索了，如果看到搜索的关键词有相应的匹配结果，那么就说明我们生成的索引文件是正确的。
 
-### 2.2 自动上传
+### 2.2. 自动上传
 
 这里我们采用npm包 [atomic-algolia](https://www.npmjs.com/package/atomic-algolia) 来完成自动上传操作。准备条件：已经安装[Node.js](https://nodejs.org/en/)，安装过程略。
 

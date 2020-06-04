@@ -55,7 +55,7 @@ systemctl restart firewalld.service
 
 配置完成后，访问使用浏览器服务器 ip ，如果能看到以下界面，表示运行成功。
 
-### 2.1 配置用户
+### 2.1. 配置用户
 
 然后新增一个名为 git 的用户，过程中需要设置登录密码，输入两次密码即可。
 
@@ -83,7 +83,7 @@ git ALL=(ALL:ALL) ALL
 chmod 440 /etc/sudoers
 ```
 
-### 2.2 上传 SSH 公钥
+### 2.2. 上传 SSH 公钥
 
 接下来要把本地的 ssh 公钥上传到服务器 。执行
 
@@ -124,7 +124,7 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub git@服务器ip地址
 
 ---
 
-### 2.3 用户授权
+### 2.3. 用户授权
 
 接下来要给用户 git 授予操作 nginx 放网页的地方的权限：
 
@@ -137,7 +137,7 @@ mkdir -p /var/www/hexo
 chown git:git -R /var/www/hexo
 ```
 
-### 2.4 配置钩子
+### 2.4. 配置钩子
 
 现在就要向 Git Hooks 操作，配置好钩子：
 
@@ -166,7 +166,7 @@ cp -rf ${TMP_GIT_CLONE}/* ${PUBLIC_WWW}
 chmod +x post-receive
 ```
 
-### 2.5 配置 nginx
+### 2.5. 配置 nginx
 
 然后是配置 nginx。执行
 
@@ -247,7 +247,7 @@ rewrite ^/(.*)$ http://bore.vip/$1 permanent;
 }
 ```
 
-### 2.6 修改自动部署脚本
+### 2.6. 修改自动部署脚本
 
 ```
 #!/bin/bash

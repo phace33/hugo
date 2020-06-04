@@ -10,7 +10,7 @@ tags: ["hugo"]
 
 ## 1. 本地操作
 
-### 1.1 安装GIt
+### 1.1. 安装GIt
 
 本地需要安装 [Git](https://git-scm.com/) ，安装过程略。安装完git后还要配置环境变量：
 右键我的电脑 --> 属性，然后点击高级系统设置 --> 环境变量 --> 选择用户变量或系统变量中的Path,点击编辑；找到Git安装目录,添加以下地址:
@@ -21,7 +21,7 @@ D:\Program Files\Git\mingw64\libexec\git-core
 D:\Program Files\Git\mingw64\bin
 ```
 
-### 1.2 配置SSH 公钥
+### 1.2. 配置SSH 公钥
 
 Windows 上安装 [Git for Windows](https://git-for-windows.github.io/) 之后在开始菜单里打开 Git Bash 输入：
 
@@ -39,9 +39,9 @@ ssh-keygen -t rsa
 
 在系统当前用户文件夹下生成了私钥 `id_rsa` 和公钥 `id_rsa.pub`。
 
-### 1.3 初始化 Hugo
+### 1.3. 初始化 Hugo
 
-#### 1.3.1 安装hugo
+#### 1.3.1. 安装hugo
 
 windows10下安装hugo，可以参照Hugo官方手册的方法，这里讲一个相对简单稳定的方法。
 
@@ -65,7 +65,7 @@ hugo version
 Hugo Static Site Generator v0.70.0/extended windows/amd64 BuildDate: unknown
 ```
 
-#### 1.3.2 创建并配置站点
+#### 1.3.2. 创建并配置站点
 
 > 以下命令均在'Git Bash'中运行
 
@@ -75,7 +75,7 @@ Hugo Static Site Generator v0.70.0/extended windows/amd64 BuildDate: unknown
 hugo new site blog  
 ```
 
-#### 1.3.3 添加主题
+#### 1.3.3. 添加主题
 
 ```
 git clone https://github.com/olOwOlo/hugo-theme-even themes/even
@@ -92,7 +92,7 @@ git pull
 
 将 根目录\themes\even\exampleSite路径下的config.toml文件复制到根目录下，覆盖掉根目录下的config.toml文件。然后，我们在notepad++中打开并对其作一定的修改就可以直接使用，具体可以修改的内容见：[config.toml的配置](https://blog.bore.vip/post/部署hugo笔记/#configtoml的配置)
 
-#### 1.3.4 设置文章模板
+#### 1.3.4. 设置文章模板
 
 为了更好的使用附加功能，我们提前修改一下模板。这样，每次使用新建一篇文档时候就省去很多麻烦事。
 使用Typora文档工具打开themes/tranquilpeak/archetypes中的post.md直接替换为以下的模板：
@@ -114,7 +114,7 @@ tags: [""]
 hugo new post/XXXX.md
 ```
 
-#### 1.3.5 新建“关于”页面
+#### 1.3.5. 新建“关于”页面
 
 ```
 hugo new about.md
@@ -130,7 +130,7 @@ hugo new about.md
   url = "/about/"
 ```
 
-#### 1.3.6 启动博客的本地预览
+#### 1.3.6. 启动博客的本地预览
 
 建议在配置文件中设置好主题，或者使用 –t指令指定主题，在站点的根目录下使用命令进行本地启动，本地启动的命令如下：
 
@@ -142,7 +142,7 @@ hugo server -D
 
 ## 2. 部署到coding
 
-### 2.1 coding上的操作
+### 2.1. coding上的操作
 
 操作和部署到github大同小异，首先要在coding上开通pages静态网站服务，注意以下几点：
 
@@ -155,7 +155,7 @@ hugo server -D
 - 开启 HTTPS，要先去域名 DNS 把 GitHub 的解析暂停掉，然后再重新申请 SSL 证书，然后开启强制 HTTPS 访问。（不然会申请失败）
 - 如果后面要用cdn全站加速，这里先不要开启ssl。
 
-### 2.2 提交本地仓库
+### 2.2. 提交本地仓库
 
 ```
 rm -rf public/*
@@ -169,11 +169,11 @@ git commit -m "Add a new post"
 git push --force origin master
 ```
 
-### 2.3 解决404错误
+### 2.3. 解决404错误
 
 可是当你push完hugo生成的静态页面源码到你的repo中后点Coding给你分配的访问地址后却返回的是404页面，其实解决这个问题也很简单，就是点一下上图中的立即部署就行了。
 
-### 2.4 自动备份脚本
+### 2.4. 自动备份脚本
 
 为了后续更新方便起见，可以在根目录新建一个一键自动部署脚本，命名为`deploy.sh`（如果对配置不做大的改动（例如：更换主题等），后续的更新可以使用以下脚本）
 
@@ -210,7 +210,7 @@ cd ..
 chmod 777 xxx
 ```
 
-### 2.5 备份hugo源码
+### 2.5. 备份hugo源码
 
 在coding上新建一个backup的分支，然后把下面代码加到`deploy.sh`末尾，这种方法有个问题，那就是themes等几个文件夹无法备份，还没找到原因。不过content文章文件夹可以备份，这样也行。
 
@@ -323,7 +323,7 @@ cd ..
 
 答：如果你想你的 pages 首页访问地址不带二级目录，如ipvb.gitee.io，你需要建立一个与自己个性地址同名的仓库，如 https://gitee.com/ipvb 这个用户，想要创建一个自己的站点，但不想以子目录的方式访问，想以ipvb.gitee.io直接访问，那么他就可以创建一个名字为ipvb的仓库 https://gitee.com/ipvb/ipvb 部署完成后，就可以以 https://ipvb.gitee.io 进行访问了。
 
-### 3.1 提交本地仓库
+### 3.1. 提交本地仓库
 
 ```
 rm -rf public/*
@@ -337,7 +337,7 @@ git commit -m "Add a new post"
 git push origin master --force
 ```
 
-### 3.2 备份hugo源码
+### 3.2. 备份hugo源码
 
 ```
 git remote rm origin

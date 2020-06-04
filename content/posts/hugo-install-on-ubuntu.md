@@ -15,7 +15,7 @@ tags: ["hugo","服务器"]
 
 > **注意：这里是参照服务器搭建hexo，所以代码里hexo没有改成hugo，不过这没有任何影响**。
 
-### 2.1 安装依赖 ###
+### 2.1. 安装依赖 ###
 
 首先，在 服务器 上安装 Git 和 nginx。
 
@@ -24,7 +24,7 @@ apt-get update -y
 apt-get install git-core nginx -y
 ```
 
-### 2.2 配置用户 ###
+### 2.2. 配置用户 ###
 
 然后新增一个名为 `git` 的用户，过程中需要设置登录密码，先输入两次密码，然后按几次回车就可。
 `adduser git`
@@ -47,7 +47,7 @@ git ALL=(ALL:ALL) ALL
 chmod 440 /etc/sudoers
 ```
 
-### 2.3 上传 SSH 公钥
+### 2.3. 上传 SSH 公钥
 
 接下来要把本地的 ssh 公钥上传到 服务器 。执行
 
@@ -87,7 +87,7 @@ ps: 如果配置完成还是提示要输入密码，可以使用 `ssh-copy-id`�
 ssh-copy-id -i ~/.ssh/id_rsa.pub git@服务器ip地址
 ```
 
-### 2.4 用户授权
+### 2.4. 用户授权
 
 接下来要给用户 git 授予操作 nginx 放网页的地方的权限：
 
@@ -101,7 +101,7 @@ mkdir hexo
 chown git:git -R /var/www/hexo
 ```
 
-### 2.5 配置钩子
+### 2.5. 配置钩子
 
 现在就要向 Git Hooks 操作，配置好钩子：
 
@@ -130,7 +130,7 @@ cp -rf ${TMP_GIT_CLONE}/* ${PUBLIC_WWW}
 chmod +x post-receive
 ```
 
-### 2.6 配置 nginx
+### 2.6. 配置 nginx
 
 然后是配置 nginx。执行
 
@@ -195,7 +195,7 @@ rewrite ^/(.*)$ http://bore.vip/$1 permanent;
 
 ---
 
-### 2.7 修改自动部署脚本
+### 2.7. 修改自动部署脚本
 
 ```
 #!/bin/bash

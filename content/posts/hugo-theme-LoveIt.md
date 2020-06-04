@@ -21,7 +21,7 @@ git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
 
 ## 2. 配置主题
 
-### 2.1 站点配置文件的修改
+### 2.1. 站点配置文件的修改
 
 将`根目录\themes\LoveIt\exampleSite`路径下的`config.toml`文件复制到根目录下，覆盖掉根目录下的`config.toml`文件。然后，我们在notepad++中打开并对其作一定的修改就可以直接使用，具体可以修改的内容如下：
 
@@ -731,7 +731,7 @@ enableEmoji = true
 
 其中搜索和评论部分，要根据实际情况修改。
 
-### 2.2 默认文章模板的修改
+### 2.2. 默认文章模板的修改
 
 将`根目录\archetypes`下的`default.md`修改如下：
 

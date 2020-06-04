@@ -12,13 +12,13 @@ tags: ["服务器"]
 
 ## 1. 安装、更新firefox
 
-### 1.1 安装firefox
+### 1.1. 安装firefox
 
 ```
 yum install firefox -y
 ```
 
-### 1.2 更新firefox
+### 1.2. 更新firefox
 
 1. 用你本地的旧版 firefox，访问http://www.firefox.com.cn，下载Linux版本的Firefox，因为我的是64位故选择的安装包是：”Firefox-latest-x86_64.tar.bz2“。
 2. 进入存放下载文件（Firefox-latest-x86_64.tar.bz2）的目录。
@@ -67,19 +67,19 @@ firefox -v
 
 ## 2. firefox优化
 
-### 2.1 设置开机启动
+### 2.1. 设置开机启动
 
 单击桌面下面最左边的那个X一样的图标选`settings–Autostarted applications`在弹出的对话框中点击Add,在name中输`firefox`,Description不用输入，Command中输入`firefox`如此firefox的开机启动也设置好了!接下来reboot一下看看是否能正常工作!
 
-### 2.2 设置不保存历史记录
+### 2.2. 设置不保存历史记录
 
 `Edit–Preferences–Privacy` 在firefox will后面的框里选`Never remember history`，还要勾选`Delete cookies and site  data when Firefox is closed`
 
-### 2.3 设置自动播放
+### 2.3. 设置自动播放
 
 依次选择`隐私和安全—Permissions—Autoplay—Allow audio and Video`
 
-### 2.4 关闭FireFox恢复上次会话功能 
+### 2.4. 关闭FireFox恢复上次会话功能 
 
 1.   在FF地址栏输入`about:config`再回车进入设置。
 2. 在过滤器中输入`browser.sessionstore`查找
@@ -90,11 +90,11 @@ firefox -v
 
 现在可以测试下，打开firefox，随便打开几个网页，再用任务管理器结束firefox.exe进程，再自己启动firefox，应该看不到那恢复会话窗口了。
 
-### 2.5 火狐禁止提交错误报告
+### 2.5. 火狐禁止提交错误报告
 
 依次选择`隐私与安全—Firefox Data Collection and Use`，取消勾选`Allow firefox to send backlogged crash reports on your behalf`
 
-### 2.6 Firefox 禁止flash崩溃提示
+### 2.6. Firefox 禁止flash崩溃提示
 
 搜索crash  
 
@@ -112,11 +112,11 @@ firefox -v
 
 ## 3. 安装配置挂机插件
 
-### 3.1 安装插件
+### 3.1. 安装插件
 
 在火狐里安装插件。
 
-### 3.2 配置插件
+### 3.2. 配置插件
 
 + Start with Firefox，选择`true`
 + Auto Add Playlists，选择`true`

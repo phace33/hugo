@@ -9,7 +9,7 @@ tags: ["nginx"]
 
 ## 1. 启用阿里免费证书
 
-### 1.1 申请证书
+### 1.1. 申请证书
 
 1. 登录阿里云[SSl证书控制台](https://yundunnext.console.aliyun.com/?spm=a2c4g.11186623.2.13.775345eav2PxV4&p=cas#/overview/cn-hangzhou)
 
@@ -20,7 +20,7 @@ tags: ["nginx"]
 4. 接下来按操作进行，具体可参考：[最新阿里云申请免费SSL证书教程](https://yq.aliyun.com/articles/637307)
 
 
-### 1.2 安装证书
+### 1.2. 安装证书
 
 基本操作参考：[在Nginx/Tengine服务器上安装证书](https://help.aliyun.com/document_detail/98728.html?spm=5176.2020520163.cas.13.6053jBDQjBDQPD)，这里具体讲下Nginx上的配置。
 
@@ -100,9 +100,9 @@ systemctl restart nginx
 
 ## 2. 添加 Let's Encrypt 免费证书
 
-### 2.1 申请 Let’s Encrypt 证书
+### 2.1. 申请 Let’s Encrypt 证书
 
-#### 2.1.1 安装 Certbot
+#### 2.1.1. 安装 Certbot
 
 在 Ubuntu 上只需要简单的一行命令：
 
@@ -110,7 +110,7 @@ systemctl restart nginx
 
 其他的发行版可以在[这里](https://certbot.eff.org/)选择。
 
-#### 2.1.2 使用 webroot 自动生成证书
+#### 2.1.2. 使用 webroot 自动生成证书
 
 Certbot 支持多种不同的「插件」来获取证书，这里选择使用 [webroot](https://certbot.eff.org/docs/using.html#webroot) 插件，它可以在不停止 Web 服务器的前提下自动生成证书，使用 `--webroot` 参数指定网站的根目录。
 
@@ -125,7 +125,7 @@ Certbot 支持多种不同的「插件」来获取证书，这里选择使用 [w
 >fullchain.pem 证书链, chain.pem + cert.pem
 >privkey.pem 证书私钥
 
-### 2.2 配置 Nginx
+### 2.2. 配置 Nginx
 
 修改 Nginx 配置文件中关于证书的配置，`vi /etc/nginx/conf.d/hexo.conf`
 
@@ -174,7 +174,7 @@ server {
 
 然后重启 Nginx ，应该就可以看到小绿标了。`/etc/init.d/nginx restart`
 
-### 2.3 自动续期
+### 2.3. 自动续期
 
 Let’s Encrypt 的证书有效期为 90 天，不过我们可以通过 crontab 定时运行命令更新证书。
 
