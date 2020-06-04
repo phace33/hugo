@@ -1,5 +1,5 @@
 ---
-title: "Bai Ye Xing Note"
+title: "白夜行读书笔记"
 subtitle: ""
 date: 2020-06-04T17:39:36+08:00
 lastmod: 2020-06-04T17:39:36+08:00
