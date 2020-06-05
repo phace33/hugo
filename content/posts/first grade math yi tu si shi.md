@@ -8,7 +8,7 @@ toc:
   enable: false 
 categories: ["教学笔记"]
 tags: ["一年级数学"]
-featuredImage: "https://gitee.com/iwyang/pics/raw/master/0ca9825daff31f19e62225b42141bc02.jpg"
+featuredImage: "https://gitee.com/iwyang/pics/raw/master/99.jpg"
 ---
 
 > 什么是“一图四式”呢？
