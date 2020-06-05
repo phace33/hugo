@@ -5,6 +5,7 @@ draft: false
 weight: false
 categories: ["建站笔记"]
 tags: ["hugo"]
+
 ---
 
  首先当然是备份博客源文件。
@@ -56,4 +57,6 @@ chmod 700 ~/.ssh
 ### 2.3. 本地最后调试
 
 重装系统后，Algolia的自动提交索引功能要重新部署一遍，具体可查看：[Hugo添加Algolia](https://bore.vip/hugo-theme-loveit-algolia/)。最后还要在博客目录里重新关联远程仓库，还是一样先备份源码到github，再部署网页到相应服务器。
+
+**先备份源码，再部署网页，是为了`GitInfo`以及`lastmod`能够生效和更新**，其实源码可以备份到github、gitee、coding中任意一个公开仓库都可以，当然备份到github最好。网页也无需和源码放在同一个代码托管平台上。
 
