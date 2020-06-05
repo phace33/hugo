@@ -15,4 +15,4 @@ featuredImagePreview: "https://gitee.com/iwyang/pics/raw/master/1.jpg"
 
   
 
-![](https://gitee.com/iwyang/pics/raw/master/1.jpg)
+![](https://gitee.com/iwyang/pics/raw/master/2.jpg)
