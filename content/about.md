@@ -6,8 +6,6 @@ categories: [""]
 tags: [""]
 ---
 
-![](https://gitee.com/iwyang/pics/raw/master/20200606010322.jpg)
-
 #### 关于本站
 
 本站主要用来收集整理资料、记录笔记，方便自己查询使用。
