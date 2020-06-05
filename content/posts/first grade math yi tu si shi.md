@@ -8,6 +8,7 @@ toc:
   enable: false 
 categories: ["教学笔记"]
 tags: ["一年级数学"]
+featuredImage: "https://gitee.com/iwyang/pics/raw/master/alan-walker-faded.jpg"
 ---
 
 > 什么是“一图四式”呢？
