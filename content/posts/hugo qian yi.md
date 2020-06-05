@@ -7,6 +7,8 @@ categories: ["建站笔记"]
 tags: ["hugo"]
 ---
 
+ 首先当然是备份博客源文件。
+
  ## 1. 更换服务器
 
 参考：
@@ -16,11 +18,13 @@ tags: ["hugo"]
 
 ## 2. 更换电脑、重装系统
 
-先备份博客源文件，然后参考：[hugo部署到coding—本地操作部分](https://bore.vip/post/hugo-install-on-coding/#%E6%9C%AC%E5%9C%B0%E6%93%8D%E4%BD%9C)
+### 2.1. 本地操作
 
-> **注意最后不用初始化hugo，因为我们已经有了博客原文件了**。
+参考：[hugo部署到coding—本地操作部分](https://bore.vip/post/hugo-install-on-coding/#%E6%9C%AC%E5%9C%B0%E6%93%8D%E4%BD%9C)，重新配置环境，生成公钥。
 
-### 2.1. 服务器上的操作
+**注意最后不用初始化hugo，因为我们已经有了博客原文件了**。
+
+### 2.2. 服务器上的操作
 
 如果是部署到服务器，先将服务器原来的SSH 公钥先删除，再上传新的SSH 公钥。具体操作如下:
 
@@ -45,9 +49,11 @@ chmod 600 ~/.ssh/authorized_keys
 chmod 700 ~/.ssh
 ```
 
-### 2.2. Coding上的操作
+### 2.2. github&gitee上的操作
 
-如果是部署到Coding，要将重新生成的SSH公钥添加到coding上，coding上可以添加多个公钥，所以不同电脑可以利用dropbox来同步源文件，进而更新博客。
+如果是备份源码到githuhb上，部署网页到gitee上，要将重新生成的SSH公钥添加到github&gitee上。两者都在右上角`个人设置里添加`。
 
+### 2.3. 本地最后调试
 
+重装系统后，Algolia的自动提交索引功能要重新部署一遍，具体可查看：[Hugo添加Algolia](https://bore.vip/hugo-theme-loveit-algolia/)。最后还要在博客目录里重新关联远程仓库，还是一样先备份源码到github，再部署网页到相应服务器。
 
