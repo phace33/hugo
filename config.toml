@@ -145,7 +145,7 @@ enableEmoji = true
     #  是否显示 Hugo 和主题信息
     hugo = true
     #  是否显示版权信息
-    copyright = false
+    copyright = true
     #  是否显示作者
     author = true
     # 网站创立年份
