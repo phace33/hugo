@@ -143,8 +143,8 @@ enableEmoji = true
     absoluteURL = false
     [params.search.algolia]
       index = "hugo"
-      appID = "W3GPBH19ZO"
-      searchKey = "5e21a3d054db52bb93d8bc274394d1b5"
+      appID = "VTWYI11VL6"
+      searchKey = "2ce1f643062e5d78e2670b8681496a07"
 
   # 页面头部导航栏配置
   [params.header]
@@ -413,7 +413,7 @@ enableEmoji = true
         enable = true
         appId = "CNeyW3xuBg8PWJwDI0ig1AE2-MdYXbMMI"
         appKey = "HrJsI7Cl93RIa8Cks5qtkSsE"
-        placeholder = "在这里留下足迹吧!(留下昵称和邮箱即可收到回复邮件提醒哦)"
+        placeholder = "在这里留下足迹吧!"
         avatar = "mp"
         meta= ['nick','mail']
         pageSize = 10
