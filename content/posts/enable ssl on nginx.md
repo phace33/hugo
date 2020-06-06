@@ -211,17 +211,17 @@ PS：Ubuntu查看crontab运行日志
 
 ## 3. 参考链接
 
-[1.在Nginx/Tengine服务器上安装证书](https://help.aliyun.com/document_detail/98728.html?spm=5176.2020520163.cas.13.6053jBDQjBDQPD)
++ [1.在Nginx/Tengine服务器上安装证书](https://help.aliyun.com/document_detail/98728.html?spm=5176.2020520163.cas.13.6053jBDQjBDQPD)
 
-[2.阿里云hexo站点https之nginx配置](https://www.ratel.net.cn/2019/07/18/%E9%98%BF%E9%87%8C%E4%BA%91hexo%E7%AB%99%E7%82%B9https%E4%B9%8Bnginx%E9%85%8D%E7%BD%AE/)
++ [2.阿里云hexo站点https之nginx配置](https://www.ratel.net.cn/2019/07/18/%E9%98%BF%E9%87%8C%E4%BA%91hexo%E7%AB%99%E7%82%B9https%E4%B9%8Bnginx%E9%85%8D%E7%BD%AE/)
 
-[3.为博客添加 Let's Encrypt 免费证书 ](https://blog.yizhilee.com/post/letsencrypt-certificate/)
++ [3.为博客添加 Let's Encrypt 免费证书 ](https://blog.yizhilee.com/post/letsencrypt-certificate/)
 
-[4.ubuntu 生成https证书 for let's encrypt](https://www.cnblogs.com/gabin/p/6844481.html)
++ [4.ubuntu 生成https证书 for let's encrypt](https://www.cnblogs.com/gabin/p/6844481.html)
 
-[5.Ubuntu 16设置定时任务](https://blog.csdn.net/a295277302/article/details/78143010)
++ [5.Ubuntu 16设置定时任务](https://blog.csdn.net/a295277302/article/details/78143010)
 
-[6.Ubuntu查看crontab运行日志](https://blog.csdn.net/zhuangtim1987/article/details/52280409)
++ [6.Ubuntu查看crontab运行日志](https://blog.csdn.net/zhuangtim1987/article/details/52280409)
 
-[7.Let's Encrypt证书自动更新](https://blog.csdn.net/shasharoman/article/details/80915222)
++ [7.Let's Encrypt证书自动更新](https://blog.csdn.net/shasharoman/article/details/80915222)
 

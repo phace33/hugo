@@ -229,15 +229,15 @@ cd ..
 
 ## 3. 参考链接
 
-[1.通过 Git Hooks 自动部署 Hexo 到 服务器](https://blog.yizhilee.com/post/deploy-hexo-to-服务器/)
++ [1.通过 Git Hooks 自动部署 Hexo 到 服务器](https://blog.yizhilee.com/post/deploy-hexo-to-服务器/)
 
-[2.在服务器上搭建hexo博客，利用git更新](https://tiktoking.github.io/2016/01/26/hexo/)
++ [2.在服务器上搭建hexo博客，利用git更新](https://tiktoking.github.io/2016/01/26/hexo/)
 
-[3.Windows10下Git环境变量配置](https://www.cnblogs.com/qingmuchuanqi48/p/12052289.html)
++ [3.Windows10下Git环境变量配置](https://www.cnblogs.com/qingmuchuanqi48/p/12052289.html)
 
-[4.hexo d后 ERROR Deployer not found: git](https://blog.csdn.net/weixin_36401046/article/details/52940313)
++ [4.hexo d后 ERROR Deployer not found: git](https://blog.csdn.net/weixin_36401046/article/details/52940313)
 
-[5. Nginx 301重定向域名](https://www.cnblogs.com/benio/archive/2010/08/16/1800584.html)
++ [5. Nginx 301重定向域名](https://www.cnblogs.com/benio/archive/2010/08/16/1800584.html)
 
 
 

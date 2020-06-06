@@ -145,4 +145,4 @@ sudo systemctl status vncserver@:1.service
 
 ## 6. 参考链接
 
-[如何在 CentOS 7 上安装和配置 VNC](https://www.gobeta.net/linux/how-to-install-and-configure-vnc-on-centos-7/)
++ [如何在 CentOS 7 上安装和配置 VNC](https://www.gobeta.net/linux/how-to-install-and-configure-vnc-on-centos-7/)

@@ -295,13 +295,13 @@ git push origin master --force
 
 ## 3. 参考链接
 
-[1.在服务器上搭建hexo博客，利用git更新](https://tiktoking.github.io/2016/01/26/hexo/#)
++ [1.在服务器上搭建hexo博客，利用git更新](https://tiktoking.github.io/2016/01/26/hexo/#)
 
-[2.从 0 开始搭建 hexo 博客](https://eliyar.biz/how_to_build_hexo_blog/)
++ [2.从 0 开始搭建 hexo 博客](https://eliyar.biz/how_to_build_hexo_blog/)
 
-[3.基于CentOS搭建Hexo博客](https://segmentfault.com/a/1190000012907499)
++ [3.基于CentOS搭建Hexo博客](https://segmentfault.com/a/1190000012907499)
 
-[4.Nginx出现403 forbidden](https://blog.csdn.net/qq_35843543/article/details/81561240)
++ [4.Nginx出现403 forbidden](https://blog.csdn.net/qq_35843543/article/details/81561240)
 
 
 

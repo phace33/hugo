@@ -141,9 +141,9 @@ vi root
 
 ## 5. 参考链接
 
-[1.centos系统crontab实现自动定时重启教程](https://www.iteye.com/blog/wangbanmin-2397404) 
++ [1.centos系统crontab实现自动定时重启教程](https://www.iteye.com/blog/wangbanmin-2397404) 
 
-[2.centos7 更新Firefox版本](https://cloud.tencent.com/developer/article/1406596)   
++ [2.centos7 更新Firefox版本](https://cloud.tencent.com/developer/article/1406596)   
 
 
 

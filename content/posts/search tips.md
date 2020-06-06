@@ -61,5 +61,5 @@ tags: ["tips"]
 
 ### 9. 参考链接
 
-[搜索效率提升200%！8个小技巧助你快速查资料](https://www.bilibili.com/video/BV1YK4y1t7bg)
++ [搜索效率提升200%！8个小技巧助你快速查资料](https://www.bilibili.com/video/BV1YK4y1t7bg)
 
