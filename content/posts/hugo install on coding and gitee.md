@@ -226,13 +226,13 @@ enableEmoji = true
       # LOGO 的 URL
       logo = ""
       # 标题名称
-      name = "cd /home"
+      name = "Bore's Note"
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
       pre = "<i class='far fa-kiss-wink-heart fa-fw'></i>"
       # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
       post = ""
       #  是否为标题显示打字机动画
-      typeit = true
+      typeit = false
 
   # 页面底部信息配置
   [params.footer]
@@ -282,7 +282,7 @@ enableEmoji = true
       # 主页显示头像的 URL
       avatarURL = "/images/avatar.jpg"
       #  主页显示的网站标题 (支持 HTML 格式)
-      title = "Bore's Note"
+      title = ""
       # 主页显示的网站副标题
       subtitle = "不必仰望别人，自己亦是风景"
       # 是否为副标题显示打字机动画
