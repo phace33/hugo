@@ -76,7 +76,19 @@ userlist_file=/etc/vsftpd/user_list
 userlist_deny=NO
 ```
 
-## 3. 创建FTP用户
+## 3. 重启vsftpd服
+
+保存文件并重新启动vsftpd服务，以使更改生效：
+
+```
+sudo systemctl restart vsftpd
+```
+
+## 4. 设置防火墙
+
+最直接方法关闭防火墙。
+
+## 5. 创建FTP用户
 
 创建一个新用户，名为admin:
 
@@ -101,10 +113,10 @@ sudo chown -R admin: /home/admin
 如果遇到文件无法下载，可能需要更改文件所属用户组，例如：
 
 ```
-chown admin vsftpd.conf
+chown admin 文件名
 ```
 
-## 4. 参考链接
+## 6. 参考链接
 
 + [1.如何在CentOS 7上使用VSFTPD设置FTP服务器](https://www.myfreax.com/how-to-setup-ftp-server-with-vsftpd-on-centos-7/)
 
