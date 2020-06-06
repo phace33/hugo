@@ -118,9 +118,9 @@ cd ..
 
 ## 3. 参考链接
 
-[1.Hugo添加Algolia搜索支持](https://edward852.github.io/post/hugo%E6%B7%BB%E5%8A%A0algolia%E6%90%9C%E7%B4%A2%E6%94%AF%E6%8C%81/)
++ [1.Hugo添加Algolia搜索支持](https://edward852.github.io/post/hugo%E6%B7%BB%E5%8A%A0algolia%E6%90%9C%E7%B4%A2%E6%94%AF%E6%8C%81/)
 
-[2.使用 Hugo + Algolia 进行静态站点搜索](https://dp2px.com/2019/09/07/hugo-algolia/)
++ [2.使用 Hugo + Algolia 进行静态站点搜索](https://dp2px.com/2019/09/07/hugo-algolia/)
 
 
 
