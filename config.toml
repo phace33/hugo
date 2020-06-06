@@ -185,7 +185,7 @@ enableEmoji = true
       # 主页显示头像的 URL
       avatarURL = "/images/avatar.jpg"
       #  主页显示的网站标题 (支持 HTML 格式)
-      title = "Bore"
+      title = ""
       # 主页显示的网站副标题
       subtitle = "不必仰望别人，自己亦是风景"
       # 是否为副标题显示打字机动画
