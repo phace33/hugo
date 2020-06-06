@@ -83,7 +83,7 @@ npm run algolia // 在hugo命令后面执行
 ```
 #!/bin/bash
 
-echo -e "\033[0;32mDeploying updates to vps...\033[0m"
+echo -e "\033[0;32mDeploying updates to gitee...\033[0m"
 
 # backup
 git add .
