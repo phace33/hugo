@@ -15,11 +15,11 @@ tags: ["hugo"]
 
 ### 1.1. 新建公共仓库
 
-新建一个公共仓库，例如我建的仓库地址：`https://gitee.com/iwyang/pics`，注意一定要勾选**勾选使用Readme文件初始化这个仓库**，否则后面会无法上传图片。
+新建一个公共仓库，例如我建的仓库地址：`https://gitee.com/iwyang/pics`，注意一定要勾选**使用Readme文件初始化这个仓库**，否则后面会无法上传图片。
 
 ### 1.2. 获取私人令牌
 
-依次点击`右上角设置—私人令牌`，在私人令牌描述中写上便于你了解该令牌用处的文字，并勾选需要的权限，PicGo要使用的私人令牌只需要user_info和projects权限，勾选上后提交，gitee将会返回私人令牌的token，保存该token，因为该token只会出现一次，离开页面过后再不会出现。
+依次点击`右上角设置—私人令牌`，在私人令牌描述中写上便于你了解该令牌用处的文字，并勾选需要的权限，PicGo要使用的私人令牌只需要`user_info`和`projects`权限，勾选上后提交，gitee将会返回私人令牌的token，保存该token，因为该token只会出现一次，离开页面过后再不会出现。
 
 ## 2. 安装&配置PicGo
 
@@ -59,7 +59,7 @@ npm config set registry https://registry.npm.taobao.org
 repo: iwyang/pics
 branch: master
 token: 输入私人令牌
-customUrl: 用填
+customUrl: 不用填
 origin: gitee   
 ```
 
