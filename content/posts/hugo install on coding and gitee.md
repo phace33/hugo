@@ -480,8 +480,8 @@ enableEmoji = true
       # Valine 评论系统设置
       [params.page.comment.valine]
         enable = true
-        appId = "CNeyW3xuBg8PWJwDI0ig1AE2-MdYXbMMI"
-        appKey = "HrJsI7Cl93RIa8Cks5qtkSsE"
+        appId = "你的appId"
+        appKey = "你的appKey"
         placeholder = "在这里留下足迹吧!"
         avatar = "mp"
         meta= ['nick','mail']
