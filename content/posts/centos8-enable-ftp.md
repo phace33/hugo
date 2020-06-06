@@ -98,7 +98,7 @@ sudo chmod 750 /home/admin
 sudo chown -R admin: /home/admin
 ```
 
-如果遇到文件无法下载，可能需要更改文件用户名，例如：
+如果遇到文件无法下载，可能需要更改文件所属用户组，例如：
 
 ```
 chown admin vsftpd.conf
