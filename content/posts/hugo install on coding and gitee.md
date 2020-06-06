@@ -962,10 +962,10 @@ gitRepo = "https://github.com/iwyang/hugo-backup"
 
 ## 5. 参考链接
 
-[1.Hugo+github搭建个人博客 (windows10)](https://saquarius.com/2019/07/hugo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2windows10/#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C)
++ [1.Hugo+github搭建个人博客 (windows10)](https://saquarius.com/2019/07/hugo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2windows10/#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C)
 
-[2.如何利用 GitHub Pages 和 Hugo 轻松搭建个人博客？](https://zhuanlan.zhihu.com/p/57361697)
++ [2.如何利用 GitHub Pages 和 Hugo 轻松搭建个人博客？](https://zhuanlan.zhihu.com/p/57361697)
 
-[3.Hugo 从入门到会用](https://blog.olowolo.com/post/hugo-quick-start/)
++ [3.Hugo 从入门到会用](https://blog.olowolo.com/post/hugo-quick-start/)
 
-[4.码云Pages](https://gitee.com/help/articles/4136#article-header0)
++ [4.码云Pages](https://gitee.com/help/articles/4136#article-header0)
