@@ -143,8 +143,8 @@ enableEmoji = true
     absoluteURL = false
     [params.search.algolia]
       index = "hugo"
-      appID = "VTWYI11VL6"
-      searchKey = "2ce1f643062e5d78e2670b8681496a07"
+      appID = "你的appID"
+      searchKey = "你的searchKey"
 
   # 页面头部导航栏配置
   [params.header]
