@@ -115,8 +115,8 @@ enableEmoji = true
     absoluteURL = false
     [params.search.algolia]
       index = "hugo"
-      appID = "VTWYI11VL6"
-      searchKey = "2ce1f643062e5d78e2670b8681496a07"
+      appID = "R7GU8Q3PGK"
+      searchKey = "03cd2f39cefdd4b40deed2f1222ad496"
 
   # 页面头部导航栏配置
   [params.header]
