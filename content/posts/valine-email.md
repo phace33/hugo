@@ -46,15 +46,15 @@ tags: ["hugo"]
 
 ## 3. 配置邮件提醒功能
 
-### 3.1 基础设置
+### 3.1. 基础设置
 
 在 设置》安全中心》服务开关中，关闭除了数据存储外的所有功能，并在下方 web 安全域名中添加好你的域名。
 
-### 3.2 配置 Valine Admin
+### 3.2. 配置 Valine Admin
 
 > Valine Admin 是 Valine  评论系统的扩展和增强，主要实现评论邮件通知、评论管理、垃圾评论过滤等功能。支持完全自定义的邮件通知模板。基于 Akismet API  实现准确的垃圾评论过滤。此外，使用云函数等技术解决了免费版云引擎休眠问题，支持云引擎自动唤醒，漏发邮件自动补发。兼容云淡风轻及 Deserts  维护的多版本 Valine。
 
-#### 3.2.1 云引擎” 一键” 部署
+#### 3.2.1. 云引擎” 一键” 部署
 
 1.**在[ Leancloud](https://leancloud.cn/dashboard/#/apps)云引擎界面**，依次选择**`部署—部署项目—Git部署—配置Git`**，填写代码库并保存：
 
@@ -104,7 +104,7 @@ https://github.com/DesertsP/Valine-Admin.git
 
 至此，Valine Admin 已经可以正常工作，更多以下是可选的进阶配置。
 
-#### 3.2.2 邮件通知模板
+#### 3.2.2. 邮件通知模板
 
 邮件通知模板在**云引擎环境变量**中设定，可自定义通知邮件标题及内容模板。
 
@@ -135,7 +135,7 @@ https://github.com/DesertsP/Valine-Admin.git
 <div style="border-top:2px solid #12ADDB;box-shadow:0 1px 3px #AAAAAA;line-height:180%;padding:0 15px 12px;margin:50px auto;font-size:12px;"><h2 style="border-bottom:1px solid #DDD;font-size:14px;font-weight:normal;padding:13px 0 10px 8px;">您在<a style="text-decoration:none;color: #12ADDB;" href="${SITE_URL}" target="_blank">${SITE_NAME}</a>上的文章有了新的评论</h2><p><strong>${NICK}</strong>回复说：</p><div style="background-color: #f5f5f5;padding: 10px 15px;margin:18px 0;word-wrap:break-word;"> ${COMMENT}</div><p>您可以点击<a style="text-decoration:none; color:#12addb" href="${POST_URL}" target="_blank">查看回复的完整內容</a><br></p></div></div>
 ```
 
-#### 3.2.3 垃圾评论检测
+#### 3.2.3. 垃圾评论检测
 
 如果还没有 Akismet Key，你可以去 [AKISMET FOR DEVELOPERS 免费申请一个](https://akismet.com/development/)；
 **当 AKISMET_KEY 设为 MANUAL_REVIEW 时，开启人工审核模式；**
