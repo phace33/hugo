@@ -17,7 +17,7 @@ tags: ["hugo"]
 
 ### 1.1. Algolia创建空索引
 
-+ 创建应用，自取名字(比如说blog)
++ 创建应用，自取名字(**注意：节点选择香港**)
 + 创建索引，自取名字(比如说hugo)
 + 点击侧栏 `API Keys`，记录信息(Application ID, Search-Only API Key, Admin API Key)
 
