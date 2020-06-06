@@ -8,7 +8,7 @@ hasCJKLanguage = true
 # 主题
 theme = "LoveIt"
 # 网站标题
-title = "Bore's Note"
+title = "般若的笔记"
 # 是否使用 robots.txt
 enableRobotsTXT = true
 # 是否使用 git 信息
@@ -84,7 +84,7 @@ enableEmoji = true
   #  应用图标配置
   [params.app]
     # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
-    title = "Bore's Note"
+    title = "般若的笔记"
     # 是否隐藏网站图标资源链接
     noFavicon = false
     # 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件
@@ -129,7 +129,7 @@ enableEmoji = true
       # LOGO 的 URL
       logo = ""
       # 标题名称
-      name = "Bore's Note"
+      name = "般若的笔记"
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
       pre = "<i class='far fa-kiss-wink-heart fa-fw'></i>"
       # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
@@ -547,7 +547,7 @@ enableEmoji = true
 
 # 作者配置
 [author]
-  name = "bore"
+  name = "般若"
   email = "iwyang@qq.com"
   link = "https://bore.vip"
 
