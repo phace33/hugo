@@ -1,5 +1,5 @@
 ---
-title: "hugo使用Valine评论系统并配置邮件提醒"
+title: "hugo使用Valine并配置邮件提醒"
 subtitle: ""
 date: 2020-06-06T10:39:27+08:00
 lastmod: 2020-06-06T10:39:27+08:00
