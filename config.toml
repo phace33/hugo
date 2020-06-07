@@ -191,7 +191,7 @@ enableEmoji = true
       # 是否为副标题显示打字机动画
       typeit = true
       # 是否显示社交账号
-      social = true
+      social = false
       #  免责声明 (支持 HTML 格式)
       disclaimer = ""
     # 主页文章列表
