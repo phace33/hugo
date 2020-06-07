@@ -205,7 +205,7 @@ enableEmoji = true
 
   # 作者的社交信息设置
   [params.social]
-    GitHub = "iwyang"
+    GitHub = ""
     Linkedin = ""
     Twitter = ""
     Instagram = ""
@@ -249,7 +249,7 @@ enableEmoji = true
     Skype = ""
     Whatsapp = ""
     Zhihu = ""
-    Douban = "185432529"
+    Douban = ""
     Angellist = ""
     Slidershare = ""
     Jsfiddle = ""
@@ -266,8 +266,8 @@ enableEmoji = true
     Gitea = ""
     XMPP = ""
     Matrix = ""
-    Bilibili = "20475120"
-    Email = "iwyang@qq.com"
+    Bilibili = ""
+    Email = ""
     RSS = false 
 
   #  文章页面配置
