@@ -573,12 +573,12 @@ enableEmoji = true
     privacyEnhanced = true
 
 # 用于输出 Markdown 格式文档的设置
-[mediaTypes]
+# [mediaTypes]
   [mediaTypes."text/plain"]
     suffixes = ["md"]
 
 # 用于输出 Markdown 格式文档的设置
-[outputFormats.MarkDown]
+# [outputFormats.MarkDown]
   mediaType = "text/plain"
   isPlainText = true
   isHTML = false
