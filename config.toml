@@ -268,7 +268,7 @@ enableEmoji = true
     Matrix = ""
     Bilibili = "20475120"
     Email = "iwyang@qq.com"
-    RSS = true  
+    RSS = false 
 
   #  文章页面配置
   [params.page]
