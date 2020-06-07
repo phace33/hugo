@@ -158,7 +158,7 @@ enableEmoji = true
   #  Section (所有文章) 页面配置
   [params.section]
     # section 页面每页显示文章数量
-    paginate = 10000
+    paginate = 20
     # 日期格式 (月和日)
     dateFormat = "01-02"
     # RSS 文章数目
@@ -167,7 +167,7 @@ enableEmoji = true
   #  List (目录或标签) 页面配置
   [params.list]
     # list 页面每页显示文章数量
-    paginate = 10000
+    paginate = 20
     # 日期格式 (月和日)
     dateFormat = "01-02"
     # RSS 文章数目
