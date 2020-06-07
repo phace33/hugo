@@ -4,7 +4,6 @@ subtitle: ""
 date: 2019-05-12T13:49:08+08:00
 lastmod: 2019-05-12T13:49:08+08:00
 draft: false
-lightgallery: true
 toc:
   enable: false
 weight: false
