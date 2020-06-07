@@ -6,7 +6,7 @@ weight: false
 toc:
   enable: false
 categories: ["教学笔记"]
-tags: ["一年级数学"]
+tags: ["一年级数学","练习题"]
 ---
 
 首先要记忆以下几个公式：
