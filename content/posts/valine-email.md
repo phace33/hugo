@@ -22,8 +22,6 @@ tags: ["hugo"]
 
 这里以[LoveIt](https://github.com/dillonzq/LoveIt)主题为例：
 
-<!--more-->
-
 ```
  #  评论系统设置
     [params.page.comment]

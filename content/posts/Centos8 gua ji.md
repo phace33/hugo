@@ -20,8 +20,6 @@ yum install firefox -y
 
 ### 1.2. 更新firefox
 
-<!--more-->
-
 1. 用你本地的旧版 firefox，访问http://www.firefox.com.cn，下载Linux版本的Firefox，因为我的是64位故选择的安装包是：”Firefox-latest-x86_64.tar.bz2“。
 2. 进入存放下载文件（Firefox-latest-x86_64.tar.bz2）的目录。
 3. 在该目录解压 Firefox-latest-x86_64.tar.bz2。

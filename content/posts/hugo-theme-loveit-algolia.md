@@ -21,8 +21,6 @@ tags: ["hugo"]
 + 创建索引，自取名字(比如说hugo)
 + 点击侧栏 `API Keys`，记录信息(Application ID, Search-Only API Key, Admin API Key)
 
-<!--more-->
-
 ### 1.2. Hugo生成索引文件
 
 参考上文[Hugo LoveIt主题配置与使用](https://iwyang.gitee.io/hugo-theme-loveit/)，修改`config.toml`相应Algolia参数即可。

@@ -23,8 +23,6 @@ tags: ["hugo"]
 
 参考：[hugo部署到coding—本地操作部分](https://bore.vip/post/hugo-install-on-coding/#%E6%9C%AC%E5%9C%B0%E6%93%8D%E4%BD%9C)，重新配置环境，生成公钥。
 
-<!--more-->
-
 **注意最后不用初始化hugo，因为我们已经有了博客原文件了**。
 
 ### 2.2. 服务器上的操作

@@ -26,8 +26,6 @@ sudo systemctl enable vsftpd
 
 ## 2. 配置vsftpd
 
-<!--more-->
-
 ```
 vi /etc/vsftpd/vsftpd.conf
 ```

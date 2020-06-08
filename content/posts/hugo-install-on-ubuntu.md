@@ -19,8 +19,6 @@ tags: ["hugo","服务器"]
 
 首先，在 服务器 上安装 Git 和 nginx。
 
-<!--more-->
-
 ```
 apt-get update -y
 apt-get install git-core nginx -y
