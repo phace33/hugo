@@ -21,6 +21,8 @@ tags: ["hugo","服务器"]
 
 准备工作：如果服务器端口不是22，先要更改SSH端口，
 
+<!--more-->
+
 ```
 vi /etc/ssh/sshd_config
 port 22

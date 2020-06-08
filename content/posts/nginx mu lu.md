@@ -22,6 +22,8 @@ vi /etc/nginx/nginx.conf
 
 将下面几行配置文件加入nginx配置的server段内：
 
+<!--more-->
+
 ```
 autoindex on;                        
 autoindex_exact_size off;            

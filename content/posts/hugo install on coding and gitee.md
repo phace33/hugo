@@ -15,6 +15,8 @@ tags: ["hugo"]
 本地需要安装 [Git](https://git-scm.com/) ，安装过程略。安装完git后还要配置环境变量：
 右键我的电脑 --> 属性，然后点击高级系统设置 --> 环境变量 --> 选择用户变量或系统变量中的Path,点击编辑；找到Git安装目录,添加以下地址:
 
+<!--more-->
+
 ```
 D:\Program Files\Git\bin
 D:\Program Files\Git\mingw64\libexec\git-core

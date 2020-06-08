@@ -23,6 +23,8 @@ yum install tigervnc-server -y
 
 现在安装了 VNC 服务器，下一步是运行 vncserver 命令，该命令将创建初始配置并设置密码。
 
+<!--more-->
+
 ```
 vncserver
 ```
