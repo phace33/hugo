@@ -21,22 +21,16 @@ tags: ["hugo"]
 
 **Token description** 也就是 Token 的名字，可以随便填。然后**一定要勾选上 `repo` 上的所以项目，然后别的项目一个都不要选**。点 `Generate token` 生成 Token。
 
-![](https://gitee.com/iwyang/pics/raw/master/20200608233741.jpg)
-
 然后记下 Token 的值，也就是我打码的那一部分 (一定要记下来，因为离开这个页面之后就没有机会再次查看了)
 
 ## 3. 设置 Travis CI
 
-接着来到 [Travis CI](https://travis-ci.org/account/repositories)，使用 GitHub 帐号登录；然后为 **`Blog`** 源码仓库打上 ☑，然后点 `setting`。
+接着来到 [Travis CI](https://travis-ci.org/account/repositories)，使用 GitHub 帐号登录；然后为 **`hugo-backup`** 源码仓库打上 ☑，然后点 `setting`。
 
-![](https://gitee.com/iwyang/pics/raw/master/20200608234521.jpg)
-
-然后点击`hugo-backup`右边的`setting`，找到`Environment Variables`，填写 **Environment Variables**。
+找到`Environment Variables`，填写 相关信息。
 
 - **`Name`** 填写： `GITHUB_TOKEN`
 - **`Value`** 填写：刚刚在 GitHub 申请到的 Token 的值
-
-![](https://gitee.com/iwyang/pics/raw/master/20200608235114.png)
 
 最后，点击add添加。
 
