@@ -158,7 +158,7 @@ deploy:
 
 ### 5.1.  备份源码到github
 
-源码备份到github后， Travis CI 会自动部署Hugo，你甚至连 Hugo 都可以不要装。
+源码备份到github后， Travis CI 会自动部署Hugo，你甚至连 Hugo 都可以不装。
 
 ```
 git remote rm origin
@@ -185,4 +185,45 @@ git commit -m "$msg"
 git push origin master --force
 ```
 
-##  5.3. 双线部署脚本
+###  5.3. 双线部署脚本
+
+以后为了方便，在根目录新建一个自动部署脚本`deploy.sh`：
+
+```
+#!/bin/bash
+
+echo -e "\033[0;32mDeploying updates to gitee...\033[0m"
+
+# backup
+git add .
+git commit -m "备份源码"
+git push origin master --force
+
+# Removing existing files
+rm -rf public/*
+# Build the project
+hugo
+npm install
+npm run algolia 
+# Go To Public folder
+cd public
+git add .
+
+# Commit changes.
+msg="rebuilding site `date`"
+if [ $# -eq 1 ]
+  then msg="$1"
+fi
+git commit -m "$msg"
+
+# Push source and build repos.
+git push origin master --force
+
+# Come Back up to the Project Root
+cd ..
+```
+
+## 6. 参考链接
+
++ [使用 Travis CI 自动部署 Hugo 博客](https://mogeko.me/2018/028/)
+
