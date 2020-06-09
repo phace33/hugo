@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://bore.vip/github-travis-ci-and-fwq/" />
 <meta property="og:image" content="https://bore.vip/logo.png"/>
 <meta property="article:published_time" content="2020-06-08T23:29:38+08:00" />
-<meta property="article:modified_time" content="2020-06-09T09:09:48+08:00" />
+<meta property="article:modified_time" content="2020-06-09T11:12:04+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://bore.vip/logo.png"/>
 
@@ -29,8 +29,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/bore.vip\/github-travis-ci-and-fwq\/"
-        },"genre": "posts","keywords": "hugo","wordcount":  2096 ,
-        "url": "https:\/\/bore.vip\/github-travis-ci-and-fwq\/","datePublished": "2020-06-08T23:29:38+08:00","dateModified": "2020-06-09T09:09:48+08:00","publisher": {
+        },"genre": "posts","keywords": "hugo","wordcount":  2098 ,
+        "url": "https:\/\/bore.vip\/github-travis-ci-and-fwq\/","datePublished": "2020-06-08T23:29:38+08:00","dateModified": "2020-06-09T11:12:04+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -106,7 +106,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Github&#43;Travis CI&#43;服务器双线部署hugo</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://bore.vip" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>bore</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>建站笔记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-06-08">2020-06-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2096 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-06-08">2020-06-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2098 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;<span id="/github-travis-ci-and-fwq/" class="leancloud_visitors" data-flag-title="Github&#43;Travis CI&#43;服务器双线部署hugo">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -488,9 +488,6 @@ git push origin master --force
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="6-附录以及一些坑">6. 附录以及一些坑</h2>
-<blockquote>
-<p>PS：我并没有做以下操作。</p>
-</blockquote>
 <h3 id="61-添加-gitignore-文件">6.1 添加 .gitignore 文件</h3>
 <p>在 Hugo 本地编译时会产生 <code>public</code> 文件夹，但是这个文件夹中的内容对于 <strong>hugo-backup仓库</strong> 来说是不需要的 (包括用来存放主题的 <code>themes</code> 文件夹和主题产生的 <code>resources</code> 文件夹也是不需要的)</p>
 <p>我们可以用一个<code>.gitignore</code> 文件来排除这些内容</p>
@@ -508,6 +505,9 @@ resources/*
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="62-travis-ci-的分支白名单">6.2 Travis CI 的分支白名单</h3>
+<blockquote>
+<p>PS：我并没有进行此步操作。</p>
+</blockquote>
 <p>我给你的 <code>travis.yml</code> 文件中有怎么一段:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -521,7 +521,7 @@ themes/*
 resources/*
 </code></pre></td></tr></table>
 </div>
-</div><p>这一段的作用是限制触发构建的分支。这在正常开发中是很重要的配置，特别是在团队 (多人) 开发的场景中。不过这里不存在这个场景，并且如果配置错了会出很大的问题，很容易坑到小白， 如果你晓得这是干啥的，并且觉得有必要的话，可以考虑开启。</p>
+</div><p>s这一段的作用是限制触发构建的分支。这在正常开发中是很重要的配置，特别是在团队 (多人) 开发的场景中。不过这里不存在这个场景，并且如果配置错了会出很大的问题，很容易坑到小白， 如果你晓得这是干啥的，并且觉得有必要的话，可以考虑开启。</p>
 <h2 id="7-参考链接">7. 参考链接</h2>
 <ul>
 <li><a href="https://mogeko.me/2018/028/" target="_blank" rel="noopener noreffer">使用 Travis CI 自动部署 Hugo 博客</a></li>
@@ -530,8 +530,8 @@ resources/*
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2020-06-09&nbsp;<a class="git-hash" href="https://github.com/iwyang/hugo/commit/e573ab47c514ce94ff67a8f98d8ec2595356c7b1" target="_blank" title="commit by yang(yang@qq.com) e573ab47c514ce94ff67a8f98d8ec2595356c7b1: 备份源码">
-                                    <i class="fas fa-hashtag fa-fw"></i>e573ab4</a></span>
+                <span>更新于 2020-06-09&nbsp;<a class="git-hash" href="https://github.com/iwyang/hugo/commit/6a73c4556556c9b499cb8dd4dc4600917046c5f0" target="_blank" title="commit by yang(yang@qq.com) 6a73c4556556c9b499cb8dd4dc4600917046c5f0: 备份源码">
+                                    <i class="fas fa-hashtag fa-fw"></i>6a73c45</a></span>
             </div>
             <div class="post-info-license"></div>
         </div>
