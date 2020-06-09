@@ -181,6 +181,28 @@ git remote add origin git@github.com:iwyang/hugo-backup.git
 git push --force origin master
 ```
 
+---
+
+PS:这里`Git Bash`开头会报错：`warning: LF will be replaced by CRLF`，解决方法：在`git add .`前面添加：
+
+```
+git config --global core.autocrlf false
+```
+
+ 最终效果：
+
+```
+# backup
+git config --global core.autocrlf false
+git add .
+git commit -m "备份源码"
+git push origin master --force
+```
+
+在自动部署脚本里也要作相应修改。
+
+---
+
 ###  5.3. 双线部署脚本
 
 以后为了方便，在根目录新建一个自动部署脚本`deploy.sh`：
@@ -235,6 +257,21 @@ themes/*
 resources/*
 ```
 
+---
+
+> **PS：如果.gitignore规则不生效，那是因为某些文件已经被纳入了版本管理中，则修改.gitignore是无效的。那么解决方法就是先把本地缓存删除（改变成未track状态），然后再提交：**
+
+```
+git rm -r --cached .
+git add .
+git commit -m "备份源码"
+git push origin master --force
+```
+
+每次修改`.gitignore`规则，都要先把本地缓存删除，然后再提交。
+
+---
+
 ### 6.2 Travis CI 的分支白名单
 
 >PS：我并没有进行此步操作。
@@ -252,4 +289,5 @@ s这一段的作用是限制触发构建的分支。这在正常开发中是很�
 ## 7. 参考链接
 
 + [使用 Travis CI 自动部署 Hugo 博客](https://mogeko.me/2018/028/)
++ [Git忽略规则及.gitignore规则不生效的解决办法](https://blog.csdn.net/yingpaixiaochuan/article/details/53729446)
 
