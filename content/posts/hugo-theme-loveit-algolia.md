@@ -74,6 +74,12 @@ ALGOLIA_ADMIN_KEY=你的Admin API Key
 你可以本地执行 `npm run algolia` 查看运行效果。后续就是把下面的命令加到你的自动部署脚本即可：
 
 ```
+npm run algolia // 在hugo命令后面执行
+```
+
+如果出现问题，试下以下命令：
+
+```
 npm install
 npm run algolia // 在hugo命令后面执行
 ```
@@ -122,8 +128,8 @@ cd ..
 ## 3. 参考链接
 
 + [1.Hugo添加Algolia搜索支持](https://edward852.github.io/post/hugo%E6%B7%BB%E5%8A%A0algolia%E6%90%9C%E7%B4%A2%E6%94%AF%E6%8C%81/)
-
 + [2.使用 Hugo + Algolia 进行静态站点搜索](https://dp2px.com/2019/09/07/hugo-algolia/)
++ [3.采用 Algolia 作为 Hugo 搜索方案](https://10101.io/2018/11/23/search-with-algolia-in-hugo)
 
 
 
