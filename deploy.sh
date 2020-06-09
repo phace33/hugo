@@ -12,7 +12,6 @@ git push origin master --force
 rm -rf public/*
 # Build the project
 hugo
-npm install --no-optional
 npm run algolia 
 # Go To Public folder
 cd public
