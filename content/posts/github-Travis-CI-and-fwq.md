@@ -241,7 +241,37 @@ git push origin master --force
 cd ..
 ```
 
-## 6. 附录以及一些坑 
+## 6. 添加 .gitignore 文件
+在 Hugo 本地编译时会产生 `public` 文件夹，但是这个文件夹中的内容对于 **hugo仓库** 来说是不需要的 (包括用来存放主题的 `themes` 文件夹和主题产生的 `resources` 文件夹也是不需要的)
+
+我们可以用一个`.gitignore` 文件来排除这些内容
+
+在博客根目录下创建并修改 `.gitignore`，然后提交到 GitHub。
+
+```yaml
+/public
+/themes
+/resources
+/node_modules
+```
+
+---
+
+> **PS：如果.gitignore规则不生效，那是因为某些文件已经被纳入了版本管理中，则修改.gitignore是无效的。那么解决方法就是先把本地缓存删除（改变成未track状态），然后再提交：**
+
+```
+git rm -r --cached .
+git add .
+git commit -m "备份源码"
+git push origin master --force
+```
+
+每次修改`.gitignore`规则，都要先把本地缓存删除，然后再提交。
+
+---
+
+
+## 7. 附录以及一些坑 
 
 ### 6.1 添加 .gitignore 文件
 
@@ -251,10 +281,10 @@ cd ..
 
 在博客根目录下创建并修改 `.gitignore`，然后提交到 GitHub。
 
-```
+```yaml
 /public
-themes/*
-resources/*
+/themes
+/resources
 /node_modules
 ```
 
