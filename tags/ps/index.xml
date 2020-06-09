@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>ps - 标签 - Bore&#39;s Note</title>
+        <link>https://bore.vip/tags/ps/</link>
+        <description>ps - 标签 - Bore&#39;s Note</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>iwyang@qq.com (bore)</managingEditor>
+            <webMaster>iwyang@qq.com (bore)</webMaster><lastBuildDate>Sat, 16 May 2020 00:43:08 &#43;0800</lastBuildDate><atom:link href="https://bore.vip/tags/ps/" rel="self" type="application/rss+xml" /><item>
+    <title>让Photoshop CC支持.ico格式</title>
+    <link>https://bore.vip/install-ico-plugin-in-photoshop-cc/</link>
+    <pubDate>Sat, 16 May 2020 00:43:08 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/install-ico-plugin-in-photoshop-cc/</guid>
+    <description><![CDATA[下载插件：官网下载地址：ICO (Windows Icon) Format ，找到ICO (Windows Icon) Format，然后根据系统选择相应版本，如Windows (64 bit)，进行下载。 复制下载的]]></description>
+</item></channel>
+</rss>

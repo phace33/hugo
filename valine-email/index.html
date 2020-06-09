@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>hugo使用Valine并配置邮件提醒 - Bore&#39;s Note</title><meta name="Description" content="本站主要用来收集整理资料、记录笔记，方便自己查询使用。"><meta property="og:title" content="hugo使用Valine并配置邮件提醒" />
+<meta property="og:description" content="1. 注册 Valine 注意右上角选择国际版。 你可以点击 LeanCloud ，注册登录，进入控制台后点击创建应用。 进入刚刚创建的应用，选择设置 》应用Keys，就能看到你的 APP ID" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://bore.vip/valine-email/" />
+<meta property="og:image" content="https://bore.vip/logo.png"/>
+<meta property="article:published_time" content="2020-06-06T10:39:27+08:00" />
+<meta property="article:modified_time" content="2020-06-08T11:14:48+08:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://bore.vip/logo.png"/>
+
+<meta name="twitter:title" content="hugo使用Valine并配置邮件提醒"/>
+<meta name="twitter:description" content="1. 注册 Valine 注意右上角选择国际版。 你可以点击 LeanCloud ，注册登录，进入控制台后点击创建应用。 进入刚刚创建的应用，选择设置 》应用Keys，就能看到你的 APP ID"/>
+<meta name="application-name" content="Bore&#39;s Note">
+<meta name="apple-mobile-web-app-title" content="Bore&#39;s Note"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://bore.vip/valine-email/" /><link rel="prev" href="https://bore.vip/gitee-picgo-typecho/" /><link rel="next" href="https://bore.vip/centos8-enable-ftp/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "hugo使用Valine并配置邮件提醒",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/bore.vip\/valine-email\/"
+        },"genre": "posts","keywords": "hugo","wordcount":  3154 ,
+        "url": "https:\/\/bore.vip\/valine-email\/","datePublished": "2020-06-06T10:39:27+08:00","dateModified": "2020-06-08T11:14:48+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "bore"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Bore&#39;s Note">Bore&#39;s Note</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"> 首页 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/posts/"> 归档 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Bore&#39;s Note">Bore&#39;s Note</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/" title="">首页</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/posts/" title="">归档</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">hugo使用Valine并配置邮件提醒</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://bore.vip" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>bore</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>建站笔记</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-06-06">2020-06-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3154 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 7 分钟&nbsp;<span id="/valine-email/" class="leancloud_visitors" data-flag-title="hugo使用Valine并配置邮件提醒">
+                        <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-注册-valine">1. 注册 Valine</a></li>
+    <li><a href="#2-修改configtoml">2. 修改config.toml</a></li>
+    <li><a href="#3-配置邮件提醒功能">3. 配置邮件提醒功能</a>
+      <ul>
+        <li><a href="#31-基础设置">3.1. 基础设置</a></li>
+        <li><a href="#32-配置-valine-admin">3.2. 配置 Valine Admin</a>
+          <ul>
+            <li><a href="#321-云引擎-一键-部署">3.2.1. 云引擎” 一键” 部署</a></li>
+            <li><a href="#322-邮件通知模板">3.2.2. 邮件通知模板</a></li>
+            <li><a href="#323-垃圾评论检测">3.2.3. 垃圾评论检测</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#4-参考链接">4. 参考链接</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="1-注册-valine">1. 注册 Valine</h2>
+<p>注意右上角选择<strong>国际版</strong>。</p>
+<ul>
+<li>你可以点击 LeanCloud ，注册登录，进入控制台后点击创建应用。</li>
+<li>进入刚刚创建的应用，选择设置 》应用Keys，就能看到你的 APP ID 和 APP Key。</li>
+</ul>
+<h2 id="2-修改configtoml">2. 修改config.toml</h2>
+<p>这里以<a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer">LoveIt</a>主题为例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"> #  评论系统设置
+    [params.page.comment]
+      enable = true
+      
+# Valine 评论系统设置
+      [params.page.comment.valine]
+        enable = true
+        appId = &#34;你的appId&#34;
+        appKey = &#34;你的appKey&#34;
+        placeholder = &#34;在这里留下足迹吧!&#34;
+        avatar = &#34;mp&#34;
+        meta= [&#39;nick&#39;,&#39;mail&#39;]
+        pageSize = 10
+        lang = &#34;&#34;
+        visitor = true
+        recordIP = true
+        highlight = true
+        enableQQ = false
+        serverURLs = &#34;&#34;
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="3-配置邮件提醒功能">3. 配置邮件提醒功能</h2>
+<h3 id="31-基础设置">3.1. 基础设置</h3>
+<p>在 设置》安全中心》服务开关中，关闭除了数据存储外的所有功能，并在下方 web 安全域名中添加好你的域名。</p>
+<h3 id="32-配置-valine-admin">3.2. 配置 Valine Admin</h3>
+<blockquote>
+<p>Valine Admin 是 Valine  评论系统的扩展和增强，主要实现评论邮件通知、评论管理、垃圾评论过滤等功能。支持完全自定义的邮件通知模板。基于 Akismet API  实现准确的垃圾评论过滤。此外，使用云函数等技术解决了免费版云引擎休眠问题，支持云引擎自动唤醒，漏发邮件自动补发。兼容云淡风轻及 Deserts  维护的多版本 Valine。</p>
+</blockquote>
+<h4 id="321-云引擎-一键-部署">3.2.1. 云引擎” 一键” 部署</h4>
+<p>1.<strong>在<a href="https://leancloud.cn/dashboard/#/apps" target="_blank" rel="noopener noreffer"> Leancloud</a>云引擎界面</strong>，依次选择<strong><code>部署—部署项目—Git部署—配置Git</code></strong>，填写代码库并保存：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">https://github.com/DesertsP/Valine-Admin.git
+</code></pre></td></tr></table>
+</div>
+</div><p>2.<strong>在设置页面，设置环境变量以及 Web 二级域名</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>SITE_NAME</th>
+<th>Bore&rsquo;s Notes</th>
+<th><code>[必填]</code> 博客名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SITE_URL</td>
+<td><code>https://bore.vip/</code></td>
+<td><code>[必填]</code> 首页地址</td>
+</tr>
+<tr>
+<td>SMTP_SERVICE</td>
+<td>QQ</td>
+<td><code>[新版支持]</code> 邮件服务提供商，支持 QQ、163、126、Gmail 以及 更多</td>
+</tr>
+<tr>
+<td>SMTP_USER</td>
+<td><a href="mailto:xxxxxx@qq.com" rel="">xxxxxx@qq.com</a></td>
+<td><code>[必填]</code>SMTP 登录用户</td>
+</tr>
+<tr>
+<td>SMTP_PASS</td>
+<td>ccxxxxxxxxch</td>
+<td><code>[必填]</code>SMTP登录密码，一般为授权码，而不是邮箱的登陆密码</td>
+</tr>
+<tr>
+<td>SENDER_NAME</td>
+<td>bore</td>
+<td><code>[必填]</code> 发件人</td>
+</tr>
+<tr>
+<td>SENDER_EMAIL</td>
+<td><a href="mailto:xxxxxx@qq.com" rel="">xxxxxx@qq.com</a></td>
+<td><code>[必填]</code> 发件邮箱</td>
+</tr>
+<tr>
+<td>ADMIN_URL</td>
+<td><code>https://xxx.avosapps.us/</code></td>
+<td><code>[建议]</code>Web 主机二级域名，用于自动唤醒</td>
+</tr>
+<tr>
+<td>BLOGGER_EMAIL</td>
+<td><a href="mailto:xxxxx@gmail.com" rel="">xxxxx@gmail.com</a></td>
+<td><code>[可选]</code> 博主通知收件地址，默认使用 SENDER_EMAIL</td>
+</tr>
+<tr>
+<td>AKISMET_KEY</td>
+<td>xxxxxxxxxxxx</td>
+<td><code>[可选]</code>Akismet Key 用于垃圾评论检测，设为 MANUAL_REVIEW 开启人工审核，留空不使用反垃圾</td>
+</tr>
+</tbody>
+</table>
+<p>二级域名用于评论后台管理：例如 <code>https://xxx.avosapps.us/</code>，还可以绑定独立域名。</p>
+<p>3.<strong>切换到部署标签页</strong>，分支使用 master，点击部署即可，第一次部署需要花点时间。</p>
+<p>4.<strong>评论管理</strong>。访问设置的二级域名 <code>https://二级域名.avosapps.us/sign-up</code>，注册管理员登录信息。此后，可以通过 <code>https://tding.avosapps.us/</code> 管理评论。也可以这样注册管理员登录信息：</p>
+<blockquote>
+<p>设置后台管理登录信息，点击 存储 -&gt; 结构化数据，选择_User -&gt; 添加行，只需要填写password、username、email这三个字段即可, 使用 email 作为账号登陆、password 作为账号密码、username 任意即可。（为了安全考虑，此 email 必须为配置中的 SMTP_USER 或 TO_EMAIL， 否则不允许登录）</p>
+</blockquote>
+<blockquote>
+<p>注：使用原版 Valine 如果遇到注册页面不显示直接跳转至登录页的情况，请手动删除_User 表中的全部数据。</p>
+</blockquote>
+<p>此后，可以通过 <code>https://二级域名.leanapp.cn/</code> 管理评论。</p>
+<p>5.<strong>定时任务设置</strong></p>
+<p>目前实现了两种云函数定时任务：</p>
+<ul>
+<li>(1) 自动唤醒，定时访问 Web APP 二级域名防止云引擎休眠；</li>
+<li>(2) 每天定时检查 24 小时内漏发的邮件通知。</li>
+</ul>
+<p>进入云引擎 - 定时任务中，创建定时器，创建两个定时任务。</p>
+<ul>
+<li>选择 <code>self-wake</code> 云函数，Cron 表达式为 <code>0 0/30 7-23 * * ?</code>，表示每天早 6 点到晚 23 点每隔 30 分钟访问云引擎，<code>ADMIN_URL</code> 环境变量务必设置正确</li>
+<li>选择 <code>resend-mails</code> 云函数，Cron 表达式为 <code>0 0 8 * * ?</code>，表示每天早 8 点检查过去 24 小时内漏发的通知邮件并补发</li>
+</ul>
+<p>添加定时器后记得点击启动方可生效。</p>
+<p>至此，Valine Admin 已经可以正常工作，更多以下是可选的进阶配置。</p>
+<h4 id="322-邮件通知模板">3.2.2. 邮件通知模板</h4>
+<p>邮件通知模板在<strong>云引擎环境变量</strong>中设定，可自定义通知邮件标题及内容模板。</p>
+<table>
+<thead>
+<tr>
+<th>环境变量</th>
+<th>示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MAIL_SUBJECT</code></td>
+<td><code>${PARENT_NICK}</code>，您在 <code>${SITE_NAME}</code> 上的评论收到了回复</td>
+<td><code>[可选]</code>@通知邮件主题（标题）模板</td>
+</tr>
+<tr>
+<td><code>MAIL_TEMPLATE</code></td>
+<td>见下文</td>
+<td><code>[可选]</code>@通知邮件内容模板</td>
+</tr>
+<tr>
+<td><code>MAIL_SUBJECT_ADMIN</code></td>
+<td><code>${SITE_NAME}</code> 上有新评论了</td>
+<td><code>[可选]</code> 博主邮件通知主题模板</td>
+</tr>
+<tr>
+<td><code>MAIL_TEMPLATE_ADMIN</code></td>
+<td>见下文</td>
+<td><code>[可选]</code> 博主邮件通知内容模板</td>
+</tr>
+</tbody>
+</table>
+<p>邮件通知包含两种，分别是<code>被@通知</code>（上面的 <code>MAIL_TEMPLATE</code>）和<code>博主通知</code>（上面的 <code>MAIL_TEMPLATE_ADMIN</code>），这两种模板都可以完全自定义。默认使用经典的蓝色风格模板。</p>
+<p>默认<code>被@通知</code>邮件内容模板如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;div style=&#34;border-top:2px solid #12ADDB;box-shadow:0 1px 3px #AAAAAA;line-height:180%;padding:0 15px 12px;margin:50px auto;font-size:12px;&#34;&gt;&lt;h2 style=&#34;border-bottom:1px solid #DDD;font-size:14px;font-weight:normal;padding:13px 0 10px 8px;&#34;&gt;您在&lt;a style=&#34;text-decoration:none;color: #12ADDB;&#34; href=&#34;${SITE_URL}&#34; target=&#34;_blank&#34;&gt;            ${SITE_NAME}&lt;/a&gt;上的评论有了新的回复&lt;/h2&gt; ${PARENT_NICK} 同学，您曾发表评论：&lt;div style=&#34;padding:0 12px 0 12px;margin-top:18px&#34;&gt;&lt;div style=&#34;background-color: #f5f5f5;padding: 10px 15px;margin:18px 0;word-wrap:break-word;&#34;&gt;            ${PARENT_COMMENT}&lt;/div&gt;&lt;p&gt;&lt;strong&gt;${NICK}&lt;/strong&gt;回复说：&lt;/p&gt;&lt;div style=&#34;background-color: #f5f5f5;padding: 10px 15px;margin:18px 0;word-wrap:break-word;&#34;&gt; ${COMMENT}&lt;/div&gt;&lt;p&gt;您可以点击&lt;a style=&#34;text-decoration:none; color:#12addb&#34; href=&#34;${POST_URL}&#34; target=&#34;_blank&#34;&gt;查看回复的完整內容&lt;/a&gt;，欢迎再次光临&lt;a style=&#34;text-decoration:none; color:#12addb&#34; href=&#34;${SITE_URL}&#34; target=&#34;_blank&#34;&gt;${SITE_NAME}&lt;/a&gt;。&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>这里还提供一个彩虹风格的 <code>@通知</code>邮件模板代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;div style=&#34;border-radius: 10px 10px 10px 10px;font-size:13px;    color: #555555;width: 666px;font-family:&#39;Century Gothic&#39;,&#39;Trebuchet MS&#39;,&#39;Hiragino Sans GB&#39;,微软雅黑,&#39;Microsoft Yahei&#39;,Tahoma,Helvetica,Arial,&#39;SimSun&#39;,sans-serif;margin:50px auto;border:1px solid #eee;max-width:100%;background: #ffffff repeating-linear-gradient(-45deg,#fff,#fff 1.125rem,transparent 1.125rem,transparent 2.25rem);box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);&#34;&gt;&lt;div style=&#34;width:100%;background:#49BDAD;color:#ffffff;border-radius: 10px 10px 0 0;background-image: -moz-linear-gradient(0deg, rgb(67, 198, 184), rgb(255, 209, 244));background-image: -webkit-linear-gradient(0deg, rgb(67, 198, 184), rgb(255, 209, 244));height: 66px;&#34;&gt;&lt;p style=&#34;font-size:15px;word-break:break-all;padding: 23px 32px;margin:0;background-color: hsla(0,0%,100%,.4);border-radius: 10px 10px 0 0;&#34;&gt;您在&lt;a style=&#34;text-decoration:none;color: #ffffff;&#34; href=&#34;${SITE_URL}&#34;&gt; ${SITE_NAME}&lt;/a&gt;上的留言有新回复啦！&lt;/p&gt;&lt;/div&gt;&lt;div style=&#34;margin:40px auto;width:90%&#34;&gt;&lt;p&gt;${PARENT_NICK} 同学，您曾在文章上发表评论：&lt;/p&gt;&lt;div style=&#34;background: #fafafa repeating-linear-gradient(-45deg,#fff,#fff 1.125rem,transparent 1.125rem,transparent 2.25rem);box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);margin:20px 0px;padding:15px;border-radius:5px;font-size:14px;color:#555555;&#34;&gt;${PARENT_COMMENT}&lt;/div&gt;&lt;p&gt;${NICK} 给您的回复如下：&lt;/p&gt;&lt;div style=&#34;background: #fafafa repeating-linear-gradient(-45deg,#fff,#fff 1.125rem,transparent 1.125rem,transparent 2.25rem);box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);margin:20px 0px;padding:15px;border-radius:5px;font-size:14px;color:#555555;&#34;&gt;${COMMENT}&lt;/div&gt;&lt;p&gt;您可以点击&lt;a style=&#34;text-decoration:none; color:#12addb&#34; href=&#34;${POST_URL}#comments&#34;&gt;查看回复的完整內容&lt;/a&gt;，欢迎再次光临&lt;a style=&#34;text-decoration:none; color:#12addb&#34;                href=&#34;${SITE_URL}&#34;&gt; ${SITE_NAME}&lt;/a&gt;。&lt;/p&gt;&lt;style type=&#34;text/css&#34;&gt;a:link{text-decoration:none}a:visited{text-decoration:none}a:hover{text-decoration:none}a:active{text-decoration:none}&lt;/style&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>默认博主通知邮件内容模板如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;div style=&#34;border-top:2px solid #12ADDB;box-shadow:0 1px 3px #AAAAAA;line-height:180%;padding:0 15px 12px;margin:50px auto;font-size:12px;&#34;&gt;&lt;h2 style=&#34;border-bottom:1px solid #DDD;font-size:14px;font-weight:normal;padding:13px 0 10px 8px;&#34;&gt;您在&lt;a style=&#34;text-decoration:none;color: #12ADDB;&#34; href=&#34;${SITE_URL}&#34; target=&#34;_blank&#34;&gt;${SITE_NAME}&lt;/a&gt;上的文章有了新的评论&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;${NICK}&lt;/strong&gt;回复说：&lt;/p&gt;&lt;div style=&#34;background-color: #f5f5f5;padding: 10px 15px;margin:18px 0;word-wrap:break-word;&#34;&gt; ${COMMENT}&lt;/div&gt;&lt;p&gt;您可以点击&lt;a style=&#34;text-decoration:none; color:#12addb&#34; href=&#34;${POST_URL}&#34; target=&#34;_blank&#34;&gt;查看回复的完整內容&lt;/a&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="323-垃圾评论检测">3.2.3. 垃圾评论检测</h4>
+<p>如果还没有 Akismet Key，你可以去 <a href="https://akismet.com/development/" target="_blank" rel="noopener noreffer">AKISMET FOR DEVELOPERS 免费申请一个</a>；
+<strong>当 AKISMET_KEY 设为 MANUAL_REVIEW 时，开启人工审核模式；</strong>
+如果你不需要反垃圾评论，Akismet Key 环境变量可以忽略。</p>
+<p><strong>为了实现较为精准的垃圾评论识别，采集的判据除了评论内容、邮件地址和网站地址外，还包括评论者的 IP 地址、浏览器信息等，但仅在云引擎后台使用这些数据，确保隐私和安全。</strong></p>
+<p><strong>如果使用了本站最新的 Valine 和 Valine Admin，并设置了 Akismet Key，可以有效地拦截垃圾评论。被标为垃圾的评论可以在管理页面取消标注。</strong></p>
+<table>
+<thead>
+<tr>
+<th>环境变量</th>
+<th>示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AKISMET_KEY</td>
+<td>xxxxxxxxxxxx</td>
+<td>[可选] Akismet Key 用于垃圾评论检测</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-参考链接">4. 参考链接</h2>
+<ul>
+<li>
+<p><a href="https://tding.top/archives/ed8b904f.html" target="_blank" rel="noopener noreffer">1.Hexo-NexT 配置 Valine </a></p>
+</li>
+<li>
+<p><a href="https://blog.juanertu.com/archives/cc0b1d61.html" target="_blank" rel="noopener noreffer">2.Valine 评论系统配置邮件提醒功能</a></p>
+</li>
+<li>
+<p><a href="https://deserts.io/valine-admin-document/" target="_blank" rel="noopener noreffer">3.Valine Admin 配置手册</a></p>
+</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2020-06-08&nbsp;<a class="git-hash" href="https://github.com/iwyang/hugo/commit/1dc6bd78fbfc8c988b356e7ae652b5be8d5c9c51" target="_blank" title="commit by yang(yang@qq.com) 1dc6bd78fbfc8c988b356e7ae652b5be8d5c9c51: 备份源码">
+                                    <i class="fas fa-hashtag fa-fw"></i>1dc6bd7</a></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/valine-email/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hugo/">hugo</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/gitee-picgo-typecho/" class="prev" rel="prev" title="Gitee&#43;Picgo&#43;Typecho搭建hugo图床"><i class="fas fa-angle-left fa-fw"></i>Gitee&#43;Picgo&#43;Typecho搭建hugo图床</a>
+            <a href="/centos8-enable-ftp/" class="next" rel="next" title="centos8搭建ftp服务器">centos8搭建ftp服务器<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.72.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://bore.vip" target="_blank">bore</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"CNeyW3xuBg8PWJwDI0ig1AE2-MdYXbMMI","appKey":"HrJsI7Cl93RIa8Cks5qtkSsE","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","meta":["nick","mail"],"pageSize":10,"placeholder":"在这里留下足迹吧!","recordIP":true,"visitor":true}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"R7GU8Q3PGK","algoliaIndex":"hugo","algoliaSearchKey":"03cd2f39cefdd4b40deed2f1222ad496","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

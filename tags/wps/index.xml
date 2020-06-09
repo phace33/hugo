@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>wps - 标签 - Bore&#39;s Note</title>
+        <link>https://bore.vip/tags/wps/</link>
+        <description>wps - 标签 - Bore&#39;s Note</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>iwyang@qq.com (bore)</managingEditor>
+            <webMaster>iwyang@qq.com (bore)</webMaster><lastBuildDate>Sat, 23 May 2020 11:38:16 &#43;0800</lastBuildDate><atom:link href="https://bore.vip/tags/wps/" rel="self" type="application/rss+xml" /><item>
+    <title>wps表格如何随机排序</title>
+    <link>https://bore.vip/excel-rank-random/</link>
+    <pubDate>Sat, 23 May 2020 11:38:16 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/excel-rank-random/</guid>
+    <description><![CDATA[首先打开需要操作的知excel表格。 然后在E2单元个中输入“=”号，添加辅助函数rand。 在E2单元格回车，专在E2单元格右下角下拉复制函数]]></description>
+</item><item>
+    <title>wps表格调整分页打印内容</title>
+    <link>https://bore.vip/excel-fen-ye/</link>
+    <pubDate>Mon, 18 May 2020 21:31:11 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/excel-fen-ye/</guid>
+    <description><![CDATA[依次选择视图—分页预览，单击选中后，我们看到文档多出了几条蓝色的实线，分出了第1页、第2页。如果我们想要调整打印的内容，只需要按住鼠标左键，]]></description>
+</item></channel>
+</rss>

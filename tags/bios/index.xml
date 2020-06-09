@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>bios - 标签 - Bore&#39;s Note</title>
+        <link>https://bore.vip/tags/bios/</link>
+        <description>bios - 标签 - Bore&#39;s Note</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>iwyang@qq.com (bore)</managingEditor>
+            <webMaster>iwyang@qq.com (bore)</webMaster><lastBuildDate>Tue, 26 May 2020 18:25:58 &#43;0800</lastBuildDate><atom:link href="https://bore.vip/tags/bios/" rel="self" type="application/rss+xml" /><item>
+    <title>联想笔记本电脑升级bios</title>
+    <link>https://bore.vip/lenovo-update-bios/</link>
+    <pubDate>Tue, 26 May 2020 18:25:58 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/lenovo-update-bios/</guid>
+    <description><![CDATA[2020.5.26 已升级安装最新bios版本： 1 2018/9/3 版本：BIOS Version: E5CN63WW,EC Version:E5IT23WW Fn+F2进入bios，Fn+F12选择启动顺序。 打开联想服务的驱动与下载网页：查找驱]]></description>
+</item></channel>
+</rss>

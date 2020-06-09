@@ -1,0 +1,78 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>建站笔记 - 分类 - Bore&#39;s Note</title>
+        <link>https://bore.vip/categories/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/</link>
+        <description>建站笔记 - 分类 - Bore&#39;s Note</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>iwyang@qq.com (bore)</managingEditor>
+            <webMaster>iwyang@qq.com (bore)</webMaster><lastBuildDate>Mon, 08 Jun 2020 23:29:38 &#43;0800</lastBuildDate><atom:link href="https://bore.vip/categories/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/" rel="self" type="application/rss+xml" /><item>
+    <title>Github&#43;Travis CI&#43;服务器双线部署hugo</title>
+    <link>https://bore.vip/github-travis-ci-and-fwq/</link>
+    <pubDate>Mon, 08 Jun 2020 23:29:38 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/github-travis-ci-and-fwq/</guid>
+    <description><![CDATA[1. 设置代码仓库 首先确保你的 GitHub 上有这两个仓库：用来部署博客的 [用户名].github.io 和 用来存放 “源码” 的 hugo-backup。 2. 申请 Token]]></description>
+</item><item>
+    <title>centos8搭建ftp服务器</title>
+    <link>https://bore.vip/centos8-enable-ftp/</link>
+    <pubDate>Sat, 06 Jun 2020 19:34:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/centos8-enable-ftp/</guid>
+    <description><![CDATA[1. 安装vsftpd 1 sudo yum install vsftpd -y 安装软件包后，启动vsftpd，并使其能够在引导时自动启动： 1 2 sudo systemctl start vsftpd sudo systemctl enable vsftpd 2. 配置vsftpd 1 vi /etc/vsftpd/vsftpd.conf 要仅允]]></description>
+</item><item>
+    <title>hugo使用Valine并配置邮件提醒</title>
+    <link>https://bore.vip/valine-email/</link>
+    <pubDate>Sat, 06 Jun 2020 10:39:27 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/valine-email/</guid>
+    <description><![CDATA[1. 注册 Valine 注意右上角选择国际版。 你可以点击 LeanCloud ，注册登录，进入控制台后点击创建应用。 进入刚刚创建的应用，选择设置 》应用Keys，就能看到你的 APP ID]]></description>
+</item><item>
+    <title>Gitee&#43;Picgo&#43;Typecho搭建hugo图床</title>
+    <link>https://bore.vip/gitee-picgo-typecho/</link>
+    <pubDate>Sat, 06 Jun 2020 08:59:15 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/gitee-picgo-typecho/</guid>
+    <description><![CDATA[1. 配置gitee 1.1. 新建公共仓库 新建一个公共仓库，例如我建的仓库地址：https://gitee.com/iwyang/pics，注意一定要勾]]></description>
+</item><item>
+    <title>Hugo添加Algolia</title>
+    <link>https://bore.vip/hugo-theme-loveit-algolia/</link>
+    <pubDate>Wed, 03 Jun 2020 23:17:48 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/hugo-theme-loveit-algolia/</guid>
+    <description><![CDATA[本文以 Loveit主题为例进行说明，记录一下怎样在hugo添加Algolia搜索以及自动化上传索引文件的方法。 1. 生成索引文件 1.1. Algolia]]></description>
+</item><item>
+    <title>Hugo LoveIt主题配置与使用</title>
+    <link>https://bore.vip/hugo-theme-loveit/</link>
+    <pubDate>Wed, 03 Jun 2020 22:44:36 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/hugo-theme-loveit/</guid>
+    <description><![CDATA[1. 安装主题 把这个主题克隆到 themes 目录: 1 git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt 2. 配置主题 2.1. 站点配置文件的修改 将根目录\themes\LoveIt\exampleSite路径下]]></description>
+</item><item>
+    <title>Nginx开启目录浏览</title>
+    <link>https://bore.vip/nginx-mu-lu/</link>
+    <pubDate>Sun, 24 May 2020 19:51:29 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/nginx-mu-lu/</guid>
+    <description><![CDATA[系统为centos8 Nginx默认目录：/usr/share/nginx/html Nginx主要配置文件：/etc/nginx/nginx.]]></description>
+</item><item>
+    <title>Centos8挂机笔记</title>
+    <link>https://bore.vip/centos8-gua-ji/</link>
+    <pubDate>Mon, 18 May 2020 15:33:15 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/centos8-gua-ji/</guid>
+    <description><![CDATA[接上篇Centos8安装xfce&amp;vnc，接下来记下，怎样在centos 服务器上挂机。 1. 安装、更新firefox 1.1. 安装firefox]]></description>
+</item><item>
+    <title>Centos8安装xfce&amp;vnc</title>
+    <link>https://bore.vip/centos8-xfce-vnc/</link>
+    <pubDate>Mon, 18 May 2020 14:06:52 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/centos8-xfce-vnc/</guid>
+    <description><![CDATA[1. 安装 Xfce 桌面环境 1 2 yum install epel-release -y yum groupinstall xfce -y 2. 安装 VNC 服务器 1 yum install tigervnc-server -y 现在安装了 VNC 服务器，下一步是运行 vncserver 命令，该命令将创建初始配置并设置密码。 1 vncserver 系统]]></description>
+</item><item>
+    <title>Hugo迁移笔记</title>
+    <link>https://bore.vip/hugo-qian-yi/</link>
+    <pubDate>Sat, 16 May 2020 00:19:46 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/hugo-qian-yi/</guid>
+    <description><![CDATA[首先当然是备份博客源文件。 1. 更换服务器 参考： Hugo部署到centos —服务器操作部分 Hugo部署到ubuntu —服务器操作部分 2. 更换电脑、]]></description>
+</item></channel>
+</rss>

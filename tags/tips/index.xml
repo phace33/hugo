@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>tips - 标签 - Bore&#39;s Note</title>
+        <link>https://bore.vip/tags/tips/</link>
+        <description>tips - 标签 - Bore&#39;s Note</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>iwyang@qq.com (bore)</managingEditor>
+            <webMaster>iwyang@qq.com (bore)</webMaster><lastBuildDate>Wed, 27 May 2020 16:54:35 &#43;0800</lastBuildDate><atom:link href="https://bore.vip/tags/tips/" rel="self" type="application/rss+xml" /><item>
+    <title>提高搜索效率的7个小技巧</title>
+    <link>https://bore.vip/search-tips/</link>
+    <pubDate>Wed, 27 May 2020 16:54:35 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/search-tips/</guid>
+    <description><![CDATA[1. 排除关键词 方法是：减号+关键词 功能是：排除一些 不想要的关键词 例如：锤子 -锤子手机 2. 精确搜索 方法是：给关键词加引号 功能是：只搜索引号里的字 3.]]></description>
+</item><item>
+    <title>Flash小技巧</title>
+    <link>https://bore.vip/flash-tips/</link>
+    <pubDate>Sun, 17 May 2020 12:32:29 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/flash-tips/</guid>
+    <description><![CDATA[按住alt键，拖动直线，会拉出一个尖点。 Ctrl+g 将绘图对象变成组，就不会覆盖；Ctrl+b将组打散。 flash中只有两种绘画对象：线条、填充。所有]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,71 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>学习笔记 - 分类 - Bore&#39;s Note</title>
+        <link>https://bore.vip/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+        <description>学习笔记 - 分类 - Bore&#39;s Note</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>iwyang@qq.com (bore)</managingEditor>
+            <webMaster>iwyang@qq.com (bore)</webMaster><lastBuildDate>Wed, 27 May 2020 16:54:35 &#43;0800</lastBuildDate><atom:link href="https://bore.vip/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="self" type="application/rss+xml" /><item>
+    <title>提高搜索效率的7个小技巧</title>
+    <link>https://bore.vip/search-tips/</link>
+    <pubDate>Wed, 27 May 2020 16:54:35 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/search-tips/</guid>
+    <description><![CDATA[1. 排除关键词 方法是：减号+关键词 功能是：排除一些 不想要的关键词 例如：锤子 -锤子手机 2. 精确搜索 方法是：给关键词加引号 功能是：只搜索引号里的字 3.]]></description>
+</item><item>
+    <title>联想笔记本电脑升级bios</title>
+    <link>https://bore.vip/lenovo-update-bios/</link>
+    <pubDate>Tue, 26 May 2020 18:25:58 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/lenovo-update-bios/</guid>
+    <description><![CDATA[2020.5.26 已升级安装最新bios版本： 1 2018/9/3 版本：BIOS Version: E5CN63WW,EC Version:E5IT23WW Fn+F2进入bios，Fn+F12选择启动顺序。 打开联想服务的驱动与下载网页：查找驱]]></description>
+</item><item>
+    <title>Win10重装系统备忘</title>
+    <link>https://bore.vip/win10-reinstall-system/</link>
+    <pubDate>Sun, 24 May 2020 14:36:17 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/win10-reinstall-system/</guid>
+    <description><![CDATA[重装系统之前，要先卸载eset杀毒软件，装完系统再重新安装。 1. 原版系统 备份E盘文件到移动硬盘。 进PE，这里使用微pe工具箱。 将系统iso文件]]></description>
+</item><item>
+    <title>wps表格如何随机排序</title>
+    <link>https://bore.vip/excel-rank-random/</link>
+    <pubDate>Sat, 23 May 2020 11:38:16 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/excel-rank-random/</guid>
+    <description><![CDATA[首先打开需要操作的知excel表格。 然后在E2单元个中输入“=”号，添加辅助函数rand。 在E2单元格回车，专在E2单元格右下角下拉复制函数]]></description>
+</item><item>
+    <title>wps表格调整分页打印内容</title>
+    <link>https://bore.vip/excel-fen-ye/</link>
+    <pubDate>Mon, 18 May 2020 21:31:11 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/excel-fen-ye/</guid>
+    <description><![CDATA[依次选择视图—分页预览，单击选中后，我们看到文档多出了几条蓝色的实线，分出了第1页、第2页。如果我们想要调整打印的内容，只需要按住鼠标左键，]]></description>
+</item><item>
+    <title>Flash小技巧</title>
+    <link>https://bore.vip/flash-tips/</link>
+    <pubDate>Sun, 17 May 2020 12:32:29 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/flash-tips/</guid>
+    <description><![CDATA[按住alt键，拖动直线，会拉出一个尖点。 Ctrl+g 将绘图对象变成组，就不会覆盖；Ctrl+b将组打散。 flash中只有两种绘画对象：线条、填充。所有]]></description>
+</item><item>
+    <title>markdown基本语法</title>
+    <link>https://bore.vip/markdown-yu-fa/</link>
+    <pubDate>Sat, 16 May 2020 08:47:17 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/markdown-yu-fa/</guid>
+    <description><![CDATA[标题 1 2 3 4 5 6 7 # 这是一级标题 ## 这是二级标题 ### 这是三级标题 #### 这是四级标题 ##### 这是五级标题 ###### 这是六级标题 1. 字体 1.1. 加粗 要加粗的文字左右分别用两个]]></description>
+</item><item>
+    <title>Win10 修改host文件的方法</title>
+    <link>https://bore.vip/win10-change-host/</link>
+    <pubDate>Sat, 16 May 2020 01:04:45 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/win10-change-host/</guid>
+    <description><![CDATA[鼠标右键点击桌面左下角的开始菜单，选择“命令提示符（管理员） 在打开的黑色命令提示符窗口中输入 notepad，敲回车； 打开的记事本页面中点右上]]></description>
+</item><item>
+    <title>让Photoshop CC支持.ico格式</title>
+    <link>https://bore.vip/install-ico-plugin-in-photoshop-cc/</link>
+    <pubDate>Sat, 16 May 2020 00:43:08 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/install-ico-plugin-in-photoshop-cc/</guid>
+    <description><![CDATA[下载插件：官网下载地址：ICO (Windows Icon) Format ，找到ICO (Windows Icon) Format，然后根据系统选择相应版本，如Windows (64 bit)，进行下载。 复制下载的]]></description>
+</item></channel>
+</rss>
