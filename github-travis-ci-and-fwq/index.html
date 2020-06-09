@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://bore.vip/github-travis-ci-and-fwq/" />
 <meta property="og:image" content="https://bore.vip/logo.png"/>
 <meta property="article:published_time" content="2020-06-08T23:29:38+08:00" />
-<meta property="article:modified_time" content="2020-06-09T16:08:50+08:00" />
+<meta property="article:modified_time" content="2020-06-09T17:32:01+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://bore.vip/logo.png"/>
 
@@ -29,8 +29,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/bore.vip\/github-travis-ci-and-fwq\/"
-        },"genre": "posts","keywords": "hugo","wordcount":  2520 ,
-        "url": "https:\/\/bore.vip\/github-travis-ci-and-fwq\/","datePublished": "2020-06-08T23:29:38+08:00","dateModified": "2020-06-09T16:08:50+08:00","publisher": {
+        },"genre": "posts","keywords": "hugo","wordcount":  2434 ,
+        "url": "https:\/\/bore.vip\/github-travis-ci-and-fwq\/","datePublished": "2020-06-08T23:29:38+08:00","dateModified": "2020-06-09T17:32:01+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -106,8 +106,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Github&#43;Travis CI&#43;服务器双线部署hugo</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://bore.vip" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>bore</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>建站笔记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-06-08">2020-06-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2520 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;<span id="/github-travis-ci-and-fwq/" class="leancloud_visitors" data-flag-title="Github&#43;Travis CI&#43;服务器双线部署hugo">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-06-08">2020-06-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2434 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;<span id="/github-travis-ci-and-fwq/" class="leancloud_visitors" data-flag-title="Github&#43;Travis CI&#43;服务器双线部署hugo">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -123,8 +123,8 @@
     <li><a href="#4--编写-travisyml">4.  编写 .travis.yml</a></li>
     <li><a href="#5-双线部署">5. 双线部署</a>
       <ul>
-        <li><a href="#51--提交public文件夹到服务器">5.1.  提交public文件夹到服务器</a></li>
-        <li><a href="#52--备份源码到github">5.2.  备份源码到github</a></li>
+        <li><a href="#51--备份源码到github">5.1.  备份源码到github</a></li>
+        <li><a href="#52--提交public文件夹到服务器">5.2.  提交public文件夹到服务器</a></li>
         <li><a href="#53-双线部署脚本">5.3. 双线部署脚本</a></li>
       </ul>
     </li>
@@ -369,36 +369,7 @@
 </div>
 </div><p>然后将代码提交到 <strong>Blog 仓库</strong> 里。等个一两分钟，就可以在 <a href="https://travis-ci.org/" target="_blank" rel="noopener noreffer">Travis CI</a> 上查看部署情况了</p>
 <h2 id="5-双线部署">5. 双线部署</h2>
-<blockquote>
-<p><strong>注意：首次部署时，先提交public文件夹到服务器，再备份源码到github，这样是为了将public文件夹关联到服务器仓库。此后都是先备份源码，再部署public文件夹。</strong></p>
-</blockquote>
-<h3 id="51--提交public文件夹到服务器">5.1.  提交public文件夹到服务器</h3>
-<p>前提是你已经在服务器上搭建好hugo环境。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">rm -rf public/*
-hugo
-cd public
-git remote rm origin
-git init
-git remote add origin git@104.224.191.88:hexo.git
-git add .
-git commit -m &#34;$msg&#34;
-git push origin master --force
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="52--备份源码到github">5.2.  备份源码到github</h3>
+<h3 id="51--备份源码到github">5.1.  备份源码到github</h3>
 <p>源码备份到github后， Travis CI 会自动部署Hugo，你甚至连 Hugo 都可以不装。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -449,7 +420,33 @@ git push origin master --force
 </div>
 </div><p>在自动部署脚本里也要作相应修改。</p>
 <hr>
-<h3 id="53-双线部署脚本">5.3. 双线部署脚本</h3>
+<h3 id="52--提交public文件夹到服务器">5.2.  提交public文件夹到服务器</h3>
+<p>前提是你已经在服务器上搭建好hugo环境。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">rm -rf public/*
+hugo
+cd public
+git remote rm origin
+git init
+git remote add origin git@104.224.191.88:hexo.git
+git add .
+git commit -m &#34;$msg&#34;
+git push origin master --force
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="53-双线部署脚本">5.3. 双线部署脚本</h3>
 <p>以后为了方便，在根目录新建一个自动部署脚本<code>deploy.sh</code>：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -598,8 +595,8 @@ resources/*
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2020-06-09&nbsp;<a class="git-hash" href="https://github.com/iwyang/hugo/commit/5d10f12581590bc82fe67eff83d1090be521e82a" target="_blank" title="commit by yang(yang@qq.com) 5d10f12581590bc82fe67eff83d1090be521e82a: 备份源码">
-                                    <i class="fas fa-hashtag fa-fw"></i>5d10f12</a></span>
+                <span>更新于 2020-06-09&nbsp;<a class="git-hash" href="https://github.com/iwyang/hugo/commit/15eebebf0283ee89aaeda1c2ff954fecb6be5ab0" target="_blank" title="commit by yang(yang@qq.com) 15eebebf0283ee89aaeda1c2ff954fecb6be5ab0: 备份源码">
+                                    <i class="fas fa-hashtag fa-fw"></i>15eebeb</a></span>
             </div>
             <div class="post-info-license"></div>
         </div>

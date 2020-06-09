@@ -140,25 +140,7 @@ deploy:
 
 ## 5. 双线部署
 
-> **注意：首次部署时，先提交public文件夹到服务器，再备份源码到github，这样是为了将public文件夹关联到服务器仓库。此后都是先备份源码，再部署public文件夹。**
-
-### 5.1.  提交public文件夹到服务器
-
-前提是你已经在服务器上搭建好hugo环境。
-
-```
-rm -rf public/*
-hugo
-cd public
-git remote rm origin
-git init
-git remote add origin git@104.224.191.88:hexo.git
-git add .
-git commit -m "$msg"
-git push origin master --force
-```
-
-### 5.2.  备份源码到github
+### 5.1.  备份源码到github
 
 源码备份到github后， Travis CI 会自动部署Hugo，你甚至连 Hugo 都可以不装。
 
@@ -192,6 +174,21 @@ git push origin master --force
 在自动部署脚本里也要作相应修改。
 
 ---
+### 5.2.  提交public文件夹到服务器
+
+前提是你已经在服务器上搭建好hugo环境。
+
+```
+rm -rf public/*
+hugo
+cd public
+git remote rm origin
+git init
+git remote add origin git@104.224.191.88:hexo.git
+git add .
+git commit -m "$msg"
+git push origin master --force
+```
 
 ###  5.3. 双线部署脚本
 
