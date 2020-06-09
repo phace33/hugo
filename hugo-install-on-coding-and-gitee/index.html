@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://bore.vip/hugo-install-on-coding-and-gitee/" />
 <meta property="og:image" content="https://bore.vip/logo.png"/>
 <meta property="article:published_time" content="2020-05-13T09:42:06+08:00" />
-<meta property="article:modified_time" content="2020-06-09T11:38:17+08:00" />
+<meta property="article:modified_time" content="2020-06-09T12:23:16+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://bore.vip/logo.png"/>
 
@@ -29,8 +29,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/bore.vip\/hugo-install-on-coding-and-gitee\/"
-        },"genre": "posts","keywords": "hugo","wordcount":  6821 ,
-        "url": "https:\/\/bore.vip\/hugo-install-on-coding-and-gitee\/","datePublished": "2020-05-13T09:42:06+08:00","dateModified": "2020-06-09T11:38:17+08:00","publisher": {
+        },"genre": "posts","keywords": "hugo","wordcount":  6905 ,
+        "url": "https:\/\/bore.vip\/hugo-install-on-coding-and-gitee\/","datePublished": "2020-05-13T09:42:06+08:00","dateModified": "2020-06-09T12:23:16+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -106,7 +106,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">hugo部署到coding&amp;gitee</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://bore.vip" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>bore</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>建站笔记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-05-13">2020-05-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 6821 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-05-13">2020-05-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 6905 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 14 分钟&nbsp;<span id="/hugo-install-on-coding-and-gitee/" class="leancloud_visitors" data-flag-title="hugo部署到coding&amp;gitee">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -1842,7 +1842,6 @@ git checkout -b backup  #切换分支
 </div>
 </div><h3 id="42-备份到github-master分支">4.2. 备份到github master分支</h3>
 <p>按理说备份到私人仓库为好，可为了<code>GitInfo</code>以及<code>lastmod</code>生效，需要新建一个公共仓库。（注意要先备份源码到github上，再部署public里的网页到服务器上，为了方便，需要在自动部署脚本里作相应设置）</p>
-<p><strong>再次强调，只有先备份了源码到github，再部署网页，<code>lastmod</code>才会更新</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1861,7 +1860,40 @@ git remote add origin git@github.com:iwyang/hugo-backup.git
 git push --force origin master
 </code></pre></td></tr></table>
 </div>
-</div><p>然后在<code>config.toml</code>里作如下修改</p>
+</div><hr>
+<blockquote>
+<p>PS:这里<code>Git Bash</code>开头会报错：<code>warning: LF will be replaced by CRLF</code>，解决方法：在<code>git add .</code>前面添加：</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">git config --global core.autocrlf false
+</code></pre></td></tr></table>
+</div>
+</div><p>最终效果：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># backup
+git config --global core.autocrlf false
+git add .
+git commit -m &#34;备份源码&#34;
+git remote add origin git@github.com:iwyang/hugo-backup.git
+git push origin master --force
+</code></pre></td></tr></table>
+</div>
+</div><p>在自动部署脚本里也要作相应修改。</p>
+<hr>
+<p>然后在<code>config.toml</code>里作如下修改</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1891,8 +1923,8 @@ gitRepo = &#34;https://github.com/iwyang/hugo-backup&#34;
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2020-06-09&nbsp;<a class="git-hash" href="https://github.com/iwyang/hugo/commit/33b86811850f753c587179fb7a8f8337cbb68a75" target="_blank" title="commit by yang(yang@qq.com) 33b86811850f753c587179fb7a8f8337cbb68a75: 备份源码">
-                                    <i class="fas fa-hashtag fa-fw"></i>33b8681</a></span>
+                <span>更新于 2020-06-09&nbsp;<a class="git-hash" href="https://github.com/iwyang/hugo/commit/6dd4274c47710783b547cabfbe79898a0ac2d759" target="_blank" title="commit by yang(yang@qq.com) 6dd4274c47710783b547cabfbe79898a0ac2d759: 备份源码">
+                                    <i class="fas fa-hashtag fa-fw"></i>6dd4274</a></span>
             </div>
             <div class="post-info-license"></div>
         </div>
