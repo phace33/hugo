@@ -4,9 +4,16 @@
         <link>https://bore.vip/</link>
         <description>本站主要用来收集整理资料、记录笔记，方便自己查询使用。</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>iwyang@qq.com (bore)</managingEditor>
-            <webMaster>iwyang@qq.com (bore)</webMaster><lastBuildDate>Mon, 08 Jun 2020 23:29:38 &#43;0800</lastBuildDate>
+            <webMaster>iwyang@qq.com (bore)</webMaster><lastBuildDate>Tue, 09 Jun 2020 14:53:03 &#43;0800</lastBuildDate>
             <atom:link href="https://bore.vip/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Cddd</title>
+    <link>https://bore.vip/cddd/</link>
+    <pubDate>Tue, 09 Jun 2020 14:53:03 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/cddd/</guid>
+    <description><![CDATA[那是最后一个。]]></description>
+</item><item>
     <title>Github&#43;Travis CI&#43;服务器双线部署hugo</title>
     <link>https://bore.vip/github-travis-ci-and-fwq/</link>
     <pubDate>Mon, 08 Jun 2020 23:29:38 &#43;0800</pubDate>
@@ -69,12 +76,5 @@
     <author>作者</author>
     <guid>https://bore.vip/first-grade-math-he-cha/</guid>
     <description><![CDATA[一年级试卷居然出现了和差问题，题目意思大概是：已知两数之和是35，两数之差是5，求这两数是多少？小学没学过方程，只能用小学的方法来解决，这里]]></description>
-</item><item>
-    <title>一年级数学括号最大能填几</title>
-    <link>https://bore.vip/first-grade-math-zui-da/</link>
-    <pubDate>Wed, 03 Jun 2020 10:02:23 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://bore.vip/first-grade-math-zui-da/</guid>
-    <description><![CDATA[求“括号最大能填几”，分两步计算。例如： (1) 39-( )＞14 第一步，先想比14大1的数是几？14+1=15； 第二步，再想39减几等于15，39-( )]]></description>
 </item></channel>
 </rss>
