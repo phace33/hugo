@@ -177,7 +177,7 @@ git remote rm origin
 git init
 git add .
 git commit -m "备份源码"
-git remote add origin git@github.com:iwyang/hugo-backup.git
+git remote add origin git@github.com:iwyang/hugo.git
 git push --force origin master
 ```
 
