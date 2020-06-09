@@ -183,7 +183,7 @@ git push --force origin master
 
 ---
 
-PS:这里`Git Bash`开头会报错：`warning: LF will be replaced by CRLF`，解决方法：在`git add .`前面添加：
+> PS:这里`Git Bash`开头会报错：`warning: LF will be replaced by CRLF`，解决方法：在`git add .`前面添加：
 
 ```
 git config --global core.autocrlf false
