@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://bore.vip/github-travis-ci-and-fwq/" />
 <meta property="og:image" content="https://bore.vip/logo.png"/>
 <meta property="article:published_time" content="2020-06-08T23:29:38+08:00" />
-<meta property="article:modified_time" content="2020-06-09T16:04:51+08:00" />
+<meta property="article:modified_time" content="2020-06-09T16:08:50+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://bore.vip/logo.png"/>
 
@@ -29,8 +29,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/bore.vip\/github-travis-ci-and-fwq\/"
-        },"genre": "posts","keywords": "hugo","wordcount":  2827 ,
-        "url": "https:\/\/bore.vip\/github-travis-ci-and-fwq\/","datePublished": "2020-06-08T23:29:38+08:00","dateModified": "2020-06-09T16:04:51+08:00","publisher": {
+        },"genre": "posts","keywords": "hugo","wordcount":  2520 ,
+        "url": "https:\/\/bore.vip\/github-travis-ci-and-fwq\/","datePublished": "2020-06-08T23:29:38+08:00","dateModified": "2020-06-09T16:08:50+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -106,7 +106,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Github&#43;Travis CI&#43;服务器双线部署hugo</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://bore.vip" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>bore</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/"><i class="far fa-folder fa-fw"></i>建站笔记</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-06-08">2020-06-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2827 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-06-08">2020-06-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2520 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;<span id="/github-travis-ci-and-fwq/" class="leancloud_visitors" data-flag-title="Github&#43;Travis CI&#43;服务器双线部署hugo">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -131,12 +131,11 @@
     <li><a href="#6-添加-gitignore-文件">6. 添加 .gitignore 文件</a></li>
     <li><a href="#7-附录以及一些坑">7. 附录以及一些坑</a>
       <ul>
-        <li><a href="#61-添加-gitignore-文件">6.1 添加 .gitignore 文件</a></li>
-        <li><a href="#62-github域名的绑定">6.2 github域名的绑定</a></li>
-        <li><a href="#63-travis-ci-的分支白名单">6.3 Travis CI 的分支白名单</a></li>
+        <li><a href="#71-github域名的绑定">7.1 github域名的绑定</a></li>
+        <li><a href="#72-travis-ci-的分支白名单">7.2 Travis CI 的分支白名单</a></li>
       </ul>
     </li>
-    <li><a href="#7-参考链接">7. 参考链接</a></li>
+    <li><a href="#8-参考链接">8. 参考链接</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="1-设置代码仓库">1. 设置代码仓库</h2>
@@ -559,45 +558,8 @@ git push origin master --force
 </div><p>每次修改<code>.gitignore</code>规则，都要先把本地缓存删除，然后再提交。</p>
 <hr>
 <h2 id="7-附录以及一些坑">7. 附录以及一些坑</h2>
-<h3 id="61-添加-gitignore-文件">6.1 添加 .gitignore 文件</h3>
-<p>在 Hugo 本地编译时会产生 <code>public</code> 文件夹，但是这个文件夹中的内容对于 <strong>hugo仓库</strong> 来说是不需要的 (包括用来存放主题的 <code>themes</code> 文件夹和主题产生的 <code>resources</code> 文件夹也是不需要的)</p>
-<p>我们可以用一个<code>.gitignore</code> 文件来排除这些内容</p>
-<p>在博客根目录下创建并修改 <code>.gitignore</code>，然后提交到 GitHub。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml">/public<span class="w">
-</span><span class="w"></span>/themes<span class="w">
-</span><span class="w"></span>/resources<span class="w">
-</span><span class="w"></span>/node_modules<span class="w">
-</span></code></pre></td></tr></table>
-</div>
-</div><hr>
-<blockquote>
-<p><strong>PS：如果.gitignore规则不生效，那是因为某些文件已经被纳入了版本管理中，则修改.gitignore是无效的。那么解决方法就是先把本地缓存删除（改变成未track状态），然后再提交：</strong></p>
-</blockquote>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">git rm -r --cached .
-git add .
-git commit -m &#34;备份源码&#34;
-git push origin master --force
-</code></pre></td></tr></table>
-</div>
-</div><p>每次修改<code>.gitignore</code>规则，都要先把本地缓存删除，然后再提交。</p>
 <hr>
-<h3 id="62-github域名的绑定">6.2 github域名的绑定</h3>
+<h3 id="71-github域名的绑定">7.1 github域名的绑定</h3>
 <p>如果github绑定了域名，则需要在<code>.travis.yml</code>里作相应修改：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -608,7 +570,7 @@ git push origin master --force
 </code></pre></td></tr></table>
 </div>
 </div><p>当然前提条件是域名已经做了cname解析。此外无需在github中做任何设置，域名绑定即可生效。</p>
-<h3 id="63-travis-ci-的分支白名单">6.3 Travis CI 的分支白名单</h3>
+<h3 id="72-travis-ci-的分支白名单">7.2 Travis CI 的分支白名单</h3>
 <blockquote>
 <p>PS：我并没有进行此步操作。</p>
 </blockquote>
@@ -626,7 +588,7 @@ resources/*
 </code></pre></td></tr></table>
 </div>
 </div><p>s这一段的作用是限制触发构建的分支。这在正常开发中是很重要的配置，特别是在团队 (多人) 开发的场景中。不过这里不存在这个场景，并且如果配置错了会出很大的问题，很容易坑到小白， 如果你晓得这是干啥的，并且觉得有必要的话，可以考虑开启。</p>
-<h2 id="7-参考链接">7. 参考链接</h2>
+<h2 id="8-参考链接">8. 参考链接</h2>
 <ul>
 <li><a href="https://mogeko.me/2018/028/" target="_blank" rel="noopener noreffer">1.使用 Travis CI 自动部署 Hugo 博客</a></li>
 <li><a href="https://blog.csdn.net/yingpaixiaochuan/article/details/53729446" target="_blank" rel="noopener noreffer">2.Git忽略规则及.gitignore规则不生效的解决办法</a></li>
@@ -636,8 +598,8 @@ resources/*
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2020-06-09&nbsp;<a class="git-hash" href="https://github.com/iwyang/hugo/commit/71b2e21d6553b117ddf00261fb0c14a262253d16" target="_blank" title="commit by yang(yang@qq.com) 71b2e21d6553b117ddf00261fb0c14a262253d16: 备份源码">
-                                    <i class="fas fa-hashtag fa-fw"></i>71b2e21</a></span>
+                <span>更新于 2020-06-09&nbsp;<a class="git-hash" href="https://github.com/iwyang/hugo/commit/5d10f12581590bc82fe67eff83d1090be521e82a" target="_blank" title="commit by yang(yang@qq.com) 5d10f12581590bc82fe67eff83d1090be521e82a: 备份源码">
+                                    <i class="fas fa-hashtag fa-fw"></i>5d10f12</a></span>
             </div>
             <div class="post-info-license"></div>
         </div>
