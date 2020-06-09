@@ -96,11 +96,11 @@ enableEmoji = true
   # 网站描述
   description = "本站主要用来收集整理资料、记录笔记，方便自己查询使用。"
   # 网站关键词
-  keywords = ["个人博客", "个人网站","笔记","hugo"]
+  keywords = ["个人博客", "个人网站","Bore's Note","hugo"]
   # 网站默认主题样式 ("light", "dark", "auto")
   defaultTheme = "auto"
   # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
-  gitRepo = "https://github.com/iwyang/hugo-backup"
+  gitRepo = "https://github.com/iwyang/hugo"
   #  哪种哈希函数用来 SRI, 为空时表示不使用 SRI
   # ("sha256", "sha384", "sha512", "md5")
   fingerprint = ""
@@ -143,8 +143,8 @@ enableEmoji = true
     absoluteURL = false
     [params.search.algolia]
       index = "hugo"
-      appID = "你的appID"
-      searchKey = "你的searchKey"
+      appID = "R7GU8Q3PGK"
+      searchKey = "03cd2f39cefdd4b40deed2f1222ad496"
 
   # 页面头部导航栏配置
   [params.header]
@@ -159,7 +159,7 @@ enableEmoji = true
       # 标题名称
       name = "Bore's Note"
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-      pre = "<i class='far fa-kiss-wink-heart fa-fw'></i>"
+      pre = ""
       # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
       post = ""
       #  是否为标题显示打字机动画
@@ -215,11 +215,11 @@ enableEmoji = true
       #  主页显示的网站标题 (支持 HTML 格式)
       title = ""
       # 主页显示的网站副标题
-      subtitle = "不必仰望别人，自己亦是风景"
+      subtitle = "一花一世界，一叶一菩提"
       # 是否为副标题显示打字机动画
       typeit = true
       # 是否显示社交账号
-      social = true
+      social = false
       #  免责声明 (支持 HTML 格式)
       disclaimer = ""
     # 主页文章列表
@@ -233,7 +233,7 @@ enableEmoji = true
 
   # 作者的社交信息设置
   [params.social]
-    GitHub = "iwyang"
+    GitHub = ""
     Linkedin = ""
     Twitter = ""
     Instagram = ""
@@ -277,7 +277,7 @@ enableEmoji = true
     Skype = ""
     Whatsapp = ""
     Zhihu = ""
-    Douban = "185432529"
+    Douban = ""
     Angellist = ""
     Slidershare = ""
     Jsfiddle = ""
@@ -294,9 +294,9 @@ enableEmoji = true
     Gitea = ""
     XMPP = ""
     Matrix = ""
-    Bilibili = "20475120"
-    Email = "iwyang@qq.com"
-    RSS = true  
+    Bilibili = ""
+    Email = ""
+    RSS = false 
 
   #  文章页面配置
   [params.page]
@@ -411,8 +411,8 @@ enableEmoji = true
       # Valine 评论系统设置
       [params.page.comment.valine]
         enable = true
-        appId = "你的appId"
-        appKey = "你的appKey"
+        appId = "CNeyW3xuBg8PWJwDI0ig1AE2-MdYXbMMI"
+        appKey = "HrJsI7Cl93RIa8Cks5qtkSsE"
         placeholder = "在这里留下足迹吧!"
         avatar = "mp"
         meta= ['nick','mail']
