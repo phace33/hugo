@@ -150,20 +150,9 @@ deploy:
 
 ## 5. 双线部署
 
-### 5.1.  备份源码到github
+> **注意：首次部署时，先提交public文件夹到服务器，再备份源码到github，这样是为了将public文件夹关联到服务器仓库。此后都是先备份源码，再部署public文件夹。**
 
-源码备份到github后， Travis CI 会自动部署Hugo，你甚至连 Hugo 都可以不装。
-
-```
-git remote rm origin
-git init
-git add .
-git commit -m "备份源码"
-git remote add origin git@github.com:iwyang/hugo-backup.git
-git push --force origin master
-```
-
-### 5.2.  提交public文件夹到服务器
+### 5.1.  提交public文件夹到服务器
 
 前提是你已经在服务器上搭建好hugo环境。
 
@@ -177,6 +166,19 @@ git remote add origin git@104.224.191.88:hexo.git
 git add .
 git commit -m "$msg"
 git push origin master --force
+```
+
+### 5.2.  备份源码到github
+
+源码备份到github后， Travis CI 会自动部署Hugo，你甚至连 Hugo 都可以不装。
+
+```
+git remote rm origin
+git init
+git add .
+git commit -m "备份源码"
+git remote add origin git@github.com:iwyang/hugo-backup.git
+git push --force origin master
 ```
 
 ###  5.3. 双线部署脚本
@@ -217,7 +219,37 @@ git push origin master --force
 cd ..
 ```
 
-## 6. 参考链接
+## 6. 附录以及一些坑 
+
+> PS：我并没有做以下操作。
+
+### 6.1 添加 .gitignore 文件
+
+在 Hugo 本地编译时会产生 `public` 文件夹，但是这个文件夹中的内容对于 **hugo-backup仓库** 来说是不需要的 (包括用来存放主题的 `themes` 文件夹和主题产生的 `resources` 文件夹也是不需要的)
+
+我们可以用一个`.gitignore` 文件来排除这些内容
+
+在博客根目录下创建并修改 `.gitignore`，然后提交到 GitHub。
+
+```
+public/*
+themes/*
+resources/*
+```
+
+### 6.2 Travis CI 的分支白名单
+
+我给你的 `travis.yml` 文件中有怎么一段:
+
+```
+public/*
+themes/*
+resources/*
+```
+
+这一段的作用是限制触发构建的分支。这在正常开发中是很重要的配置，特别是在团队 (多人) 开发的场景中。不过这里不存在这个场景，并且如果配置错了会出很大的问题，很容易坑到小白， 如果你晓得这是干啥的，并且觉得有必要的话，可以考虑开启。
+
+## 7. 参考链接
 
 + [使用 Travis CI 自动部署 Hugo 博客](https://mogeko.me/2018/028/)
 
