@@ -6,7 +6,7 @@ lastmod: 2020-06-07T20:24:29+08:00
 draft: false
 toc:
   enable: false
-weight: false
+weight: 1
 categories: ["教学笔记"]
 tags: ["一年级数学","练习题"]
 ---
