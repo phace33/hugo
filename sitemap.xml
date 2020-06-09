@@ -2,11 +2,12 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://bore.vip/</loc><lastmod>2020-06-09T12:23:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://bore.vip/</loc><lastmod>2020-06-09T12:45:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://bore.vip/posts/</loc><lastmod>2020-06-09T12:45:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://bore.vip/%E6%88%91%E6%9D%A5/</loc><lastmod>2020-06-09T12:45:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://bore.vip/categories/</loc><lastmod>2020-06-09T12:23:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://bore.vip/github-travis-ci-and-fwq/</loc><lastmod>2020-06-09T12:16:37&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://bore.vip/tags/hugo/</loc><lastmod>2020-06-09T12:23:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://bore.vip/posts/</loc><lastmod>2020-06-09T12:23:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://bore.vip/tags/</loc><lastmod>2020-06-09T12:23:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://bore.vip/categories/%E5%BB%BA%E7%AB%99%E7%AC%94%E8%AE%B0/</loc><lastmod>2020-06-09T12:23:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://bore.vip/100-jia-jian-fa/</loc><lastmod>2020-06-09T11:05:33&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
