@@ -43,9 +43,11 @@ tags: ["hugo"]
 + 安装 atomic-algolia 包
 
 ```
-npm init  // 不懂的就一直回车就好了
+npm init  // 初始化，不懂的就一直回车就好了
 npm install atomic-algolia --save
 ```
+
+执行完后会生成 `node_modules` 文件夹（如果代码托管在 GitHub 的话，可以在`.gitignore`中添加`/node_modules`以忽略该文件）。在项目根目录下还会有一个`package.json`文件，打开该文件：
 
 + 修改根目录下的 `package.json` 文件，在 `scripts` 下添加 `"algolia": "atomic-algolia"`
 

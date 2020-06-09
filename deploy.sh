@@ -3,6 +3,7 @@
 echo -e "\033[0;32mDeploying updates to gitee...\033[0m"
 
 # backup
+git config --global core.autocrlf false
 git add .
 git commit -m "备份源码"
 git push origin master --force
@@ -11,7 +12,7 @@ git push origin master --force
 rm -rf public/*
 # Build the project
 hugo
-npm install
+npm install --no-optional
 npm run algolia 
 # Go To Public folder
 cd public
