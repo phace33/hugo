@@ -13,7 +13,7 @@ tags: ["hugo"]
 
 ## 1. 设置代码仓库
 
-首先确保你的 GitHub 上有这两个仓库：**用来部署博客的 `[用户名].github.io`** 和 **用来存放 “源码” 的 `hugo-backup`**。
+首先确保你的 GitHub 上有这两个仓库：**用来部署博客的 `[用户名].github.io`** 和 **用来存放 “源码” 的 `hugo`**。
 
 ## 2. 申请 Token
 
@@ -25,7 +25,7 @@ tags: ["hugo"]
 
 ## 3. 设置 Travis CI
 
-接着来到 [Travis CI](https://travis-ci.org/account/repositories)，使用 GitHub 帐号登录；然后为 **`hugo-backup`** 源码仓库打上 ☑，然后点 `setting`。
+接着来到 [Travis CI](https://travis-ci.org/account/repositories)，使用 GitHub 帐号登录；然后为 **`hugo`** 源码仓库打上 ☑，然后点 `setting`。
 
 找到`Environment Variables`，填写 相关信息。
 
@@ -36,7 +36,7 @@ tags: ["hugo"]
 
 ## 4.  编写 .travis.yml
 
-在 **Blog** 的目录下创建并编辑一个 `.travis.yml` 文件。这个文件的作用是告诉 **Travis CI** 如何部署你的博客的，以下是标椎配置文件，相应地方要修改。
+在你博客根目录下创建并编辑一个 `.travis.yml` 文件。这个文件的作用是告诉 **Travis CI** 如何部署你的博客的，以下是标椎配置文件，相应地方要修改。
 
 ```yaml
 language: go
@@ -245,7 +245,7 @@ cd ..
 
 ### 6.1 添加 .gitignore 文件
 
-在 Hugo 本地编译时会产生 `public` 文件夹，但是这个文件夹中的内容对于 **hugo-backup仓库** 来说是不需要的 (包括用来存放主题的 `themes` 文件夹和主题产生的 `resources` 文件夹也是不需要的)
+在 Hugo 本地编译时会产生 `public` 文件夹，但是这个文件夹中的内容对于 **hugo仓库** 来说是不需要的 (包括用来存放主题的 `themes` 文件夹和主题产生的 `resources` 文件夹也是不需要的)
 
 我们可以用一个`.gitignore` 文件来排除这些内容
 
@@ -272,7 +272,17 @@ git push origin master --force
 
 ---
 
-### 6.2 Travis CI 的分支白名单
+### 6.2 github域名的绑定
+
+如果github绑定了域名，则需要在`.travis.yml`里作相应修改：
+
+```
+fqdn: blog.bore.vip
+```
+
+当然前提条件是域名已经做了cname解析。
+
+### 6.3 Travis CI 的分支白名单
 
 >PS：我并没有进行此步操作。
 
