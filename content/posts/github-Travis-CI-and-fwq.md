@@ -252,9 +252,10 @@ cd ..
 在博客根目录下创建并修改 `.gitignore`，然后提交到 GitHub。
 
 ```
-public/*
+/public
 themes/*
 resources/*
+/node_modules
 ```
 
 ---
