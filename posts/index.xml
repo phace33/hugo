@@ -4,13 +4,20 @@
         <link>https://bore.vip/posts/</link>
         <description>所有文章 | Bore&#39;s Note</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>iwyang@qq.com (bore)</managingEditor>
-            <webMaster>iwyang@qq.com (bore)</webMaster><lastBuildDate>Mon, 08 Jun 2020 23:29:38 &#43;0800</lastBuildDate><atom:link href="https://bore.vip/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>iwyang@qq.com (bore)</webMaster><lastBuildDate>Tue, 09 Jun 2020 21:52:34 &#43;0800</lastBuildDate><atom:link href="https://bore.vip/posts/" rel="self" type="application/rss+xml" /><item>
     <title>100以内加减法练习题</title>
     <link>https://bore.vip/100-jia-jian-fa/</link>
     <pubDate>Sun, 07 Jun 2020 20:24:29 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://bore.vip/100-jia-jian-fa/</guid>
     <description><![CDATA[练习1 64+8= 35-16= 60-48= 53+18= 34+37= 100-83= 21+59= 40-25= 46+46= 91-29= 61-43= 79+12= 练习2 41-23= 6+69= 84-69= 36+55= 80-35= 28+28= 28+24= 91-43= 59+39= 79+11= 100-48= 51-23= 练习3 44+29= 97-18= 48+42= 90-59= 100-56= 18+77= 67-8= 28+56= 74-26= 45+49= 37+16= 97-29= 练习4 64-15= 26+65= 87+8= 62-35= 62+28 93-45= 23+19= 82-66= 31-13= 14+76= 100-68= 13+69= 练习5 55+19= 80-53= 43+37= 65-48= 100-31= 29+34= 47-18=]]></description>
+</item><item>
+    <title>一年级数学下册第四单元《有趣的图形》错题集</title>
+    <link>https://bore.vip/first-grade-math-xia-unit4/</link>
+    <pubDate>Tue, 09 Jun 2020 21:52:34 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://bore.vip/first-grade-math-xia-unit4/</guid>
+    <description><![CDATA[]]></description>
 </item><item>
     <title>Github&#43;Travis CI&#43;服务器双线部署hugo</title>
     <link>https://bore.vip/github-travis-ci-and-fwq/</link>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>https://bore.vip/first-grade-math-he-cha/</guid>
     <description><![CDATA[一年级试卷居然出现了和差问题，题目意思大概是：已知两数之和是35，两数之差是5，求这两数是多少？小学没学过方程，只能用小学的方法来解决，这里]]></description>
-</item><item>
-    <title>一年级数学括号最大能填几</title>
-    <link>https://bore.vip/first-grade-math-zui-da/</link>
-    <pubDate>Wed, 03 Jun 2020 10:02:23 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://bore.vip/first-grade-math-zui-da/</guid>
-    <description><![CDATA[求“括号最大能填几”，分两步计算。例如： (1) 39-( )＞14 第一步，先想比14大1的数是几？14+1=15； 第二步，再想39减几等于15，39-( )]]></description>
 </item></channel>
 </rss>
