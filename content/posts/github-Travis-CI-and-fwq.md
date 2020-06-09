@@ -273,37 +273,9 @@ git push origin master --force
 
 ## 7. 附录以及一些坑 
 
-### 6.1 添加 .gitignore 文件
-
-在 Hugo 本地编译时会产生 `public` 文件夹，但是这个文件夹中的内容对于 **hugo仓库** 来说是不需要的 (包括用来存放主题的 `themes` 文件夹和主题产生的 `resources` 文件夹也是不需要的)
-
-我们可以用一个`.gitignore` 文件来排除这些内容
-
-在博客根目录下创建并修改 `.gitignore`，然后提交到 GitHub。
-
-```yaml
-/public
-/themes
-/resources
-/node_modules
-```
-
 ---
 
-> **PS：如果.gitignore规则不生效，那是因为某些文件已经被纳入了版本管理中，则修改.gitignore是无效的。那么解决方法就是先把本地缓存删除（改变成未track状态），然后再提交：**
-
-```
-git rm -r --cached .
-git add .
-git commit -m "备份源码"
-git push origin master --force
-```
-
-每次修改`.gitignore`规则，都要先把本地缓存删除，然后再提交。
-
----
-
-### 6.2 github域名的绑定
+### 7.1 github域名的绑定
 
 如果github绑定了域名，则需要在`.travis.yml`里作相应修改：
 
@@ -313,7 +285,7 @@ fqdn: blog.bore.vip
 
 当然前提条件是域名已经做了cname解析。此外无需在github中做任何设置，域名绑定即可生效。
 
-### 6.3 Travis CI 的分支白名单
+### 7.2 Travis CI 的分支白名单
 
 >PS：我并没有进行此步操作。
 
@@ -327,7 +299,7 @@ resources/*
 
 s这一段的作用是限制触发构建的分支。这在正常开发中是很重要的配置，特别是在团队 (多人) 开发的场景中。不过这里不存在这个场景，并且如果配置错了会出很大的问题，很容易坑到小白， 如果你晓得这是干啥的，并且觉得有必要的话，可以考虑开启。
 
-## 7. 参考链接
+## 8. 参考链接
 
 + [1.使用 Travis CI 自动部署 Hugo 博客](https://mogeko.me/2018/028/)
 + [2.Git忽略规则及.gitignore规则不生效的解决办法](https://blog.csdn.net/yingpaixiaochuan/article/details/53729446)
