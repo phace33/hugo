@@ -280,7 +280,7 @@ git push origin master --force
 fqdn: blog.bore.vip
 ```
 
-当然前提条件是域名已经做了cname解析。
+当然前提条件是域名已经做了cname解析。此外无需在github中做任何设置，域名绑定即可生效。
 
 ### 6.3 Travis CI 的分支白名单
 
