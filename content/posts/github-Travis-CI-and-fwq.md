@@ -289,6 +289,7 @@ s这一段的作用是限制触发构建的分支。这在正常开发中是很�
 
 ## 7. 参考链接
 
-+ [使用 Travis CI 自动部署 Hugo 博客](https://mogeko.me/2018/028/)
-+ [Git忽略规则及.gitignore规则不生效的解决办法](https://blog.csdn.net/yingpaixiaochuan/article/details/53729446)
++ [1.使用 Travis CI 自动部署 Hugo 博客](https://mogeko.me/2018/028/)
++ [2.Git忽略规则及.gitignore规则不生效的解决办法](https://blog.csdn.net/yingpaixiaochuan/article/details/53729446)
++ [3.解决git中warning: LF will be replaced by CRLF](https://www.jianshu.com/p/37a775467d39)
 
