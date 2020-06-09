@@ -7,6 +7,7 @@ draft: false
 toc:
   enable: false
 weight: false
+lightgallery: true
 categories: ["教学笔记"]
 tags: ["一年级数学","错题集"]
 ---
